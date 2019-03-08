@@ -34,7 +34,7 @@ void drawAnotherScene(int n, int v) {
 
    // Draw a polygon with specified vertices.
    glBegin(GL_POLYGON);
-      glVertex3f(80.0, 20.0, 0.0);
+      glVertex3f(20.0, 20.0, 0.0);
       glVertex3f(20.0 + v, 20.0, 0.0);
       glVertex3f(20.0, 80.0, 0.0);
       glVertex3f(20.0, 80.0, 0.0);
