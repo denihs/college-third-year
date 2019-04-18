@@ -48,10 +48,10 @@ RM = /home/denyhs/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/denyhs/Documents/College/teste
+CMAKE_SOURCE_DIR = /home/denyhs/Documents/College/college-third-year
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/denyhs/Documents/College/teste/cmake-build-debug
+CMAKE_BINARY_DIR = /home/denyhs/Documents/College/college-third-year/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denyhs/Documents/College/teste/cmake-build-debug/CMakeFiles /home/denyhs/Documents/College/teste/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denyhs/Documents/College/college-third-year/cmake-build-debug/CMakeFiles /home/denyhs/Documents/College/college-third-year/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/denyhs/Documents/College/teste/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/denyhs/Documents/College/college-third-year/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named teste
+# Target rules for targets named college-third-year
 
 # Build rule for target.
-teste: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 teste
-.PHONY : teste
+college-third-year: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 college-third-year
+.PHONY : college-third-year
 
 # fast build rule for target.
-teste/fast:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/build
-.PHONY : teste/fast
-
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/main.c.s
-.PHONY : main.c.s
+college-third-year/fast:
+	$(MAKE) -f CMakeFiles/college-third-year.dir/build.make CMakeFiles/college-third-year.dir/build
+.PHONY : college-third-year/fast
 
 # Help Target
 help:
@@ -158,10 +131,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... teste"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... college-third-year"
 .PHONY : help
 
 

@@ -42,8 +42,23 @@ static GLsizei width, height; // OpenGL window size.
 static float pointSize = 3.0; // Size of point
 static int primitive = INACTIVE; // Current drawing primitive.
 static int pointCount = 0; // Number of  specified points.
-static int tempX, tempY; // Co-ordinates of clicked point.
+static int tempX, tempY, tempX2, tempY2; // Co-ordinates of clicked point.
 static int isGrid = 1; // Is there grid?
+static int stipple = 0xFFFF;
+static int drawBack = GL_LINE;
+static int sizeGrid = 1;
+static long font = (long)GLUT_BITMAP_TIMES_ROMAN_24; // Font selection.
+
+static float color[3] = {0.0, 0.0, 0.0};
+
+
+// Routine to draw a bitmap character string.
+void writeBitmapString(void *font, char *string)
+{
+    char *c;
+
+    for (c = string; *c != '\0'; c++) glutBitmapCharacter(font, *c);
+}
 
 // Point class.
 class Point
@@ -66,6 +81,7 @@ void Point::drawPoint()
 {  
    glPointSize(size);
    glBegin(GL_POINTS);
+      glColor3fv(color);
       glVertex3f(x, y, 0.0);
    glEnd();   
 }
@@ -106,6 +122,7 @@ private:
 void Line::drawLine()
 {
    glBegin(GL_LINES);
+      glColor3fv(color);
       glVertex3f(x1, y1, 0.0);
       glVertex3f(x2, y2, 0.0);
    glEnd();
@@ -145,7 +162,8 @@ private:
 // Function to draw a rectangle.
 void Rectangle::drawRectangle()
 {
-   glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+   glPolygonMode(GL_FRONT_AND_BACK, drawBack);
+   glColor3fv(color);
    glRectf(x1, y1, x2, y2);
 }
 
@@ -174,19 +192,24 @@ public:
    {
 	  x1 = x1Val; y1 = y1Val; x2 = x2Val; y2 = y2Val; numVertices = nv;
    }
-   void drawCircle();
+   void drawCircle(int fixedColor = 0);
 private:
    int x1, y1, x2, y2, numVertices; // x and y co-ordinates of diagonally opposite vertices.
 };
 
-// Function to draw a rectangle.
-void Circle::drawCircle()
+// Function to draw a circle.
+void Circle::drawCircle(int fixedColor)
 {
+
     float t = 0;
     float R = sqrtl(pow((float) (x2 - x1), 2) + pow((float) (y2 - y1), 2));
-    glBegin(GL_LINE_LOOP);
-        for(int i = 0; i < 360; ++i)  {
-            glColor3f(0.0, 0.0, 0.0);
+
+    glPolygonMode(GL_FRONT_AND_BACK, drawBack);
+    glBegin(drawBack == GL_FILL ? GL_POLYGON : GL_LINE_LOOP);
+        for(int i = 0; i < numVertices; ++i)  {
+            if (fixedColor) glColor3f(0.0, 0.0, 0.0);
+            else glColor3fv(color);
+
             glVertex3f(x1 + R * cos(t), y1 + R * sin(t), 0.0);
             t += 2 * PI / numVertices;
         }
@@ -268,7 +291,7 @@ void drawRectangleSelectionBox(void)
 
    // Draw rectangle icon.
    glColor3f(0.0, 0.0, 0.0);
-   glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+   glPolygonMode(GL_FRONT_AND_BACK, drawBack);
    glRectf(0.025*width, 0.735*height, 0.075*width, 0.765*height);
    glEnd();  
 }
@@ -323,7 +346,7 @@ void drawCircleSelectionBox(void)
    glRectf(w1, h1, w2, h2);
 
    Circle c = Circle(0.05 * width, 0.55 * height, 0.09 * width , 0.55 * height, 360);
-   c.drawCircle();
+   c.drawCircle(1);
 
 }
 // Function to draw hexagon selection box in left selection area.
@@ -346,7 +369,7 @@ void drawHexagonSelectionBox(void)
    glRectf(w1, h1, w2, h2);
 
    Circle c = Circle(0.05 * width, 0.45 * height, 0.09 * width , 0.45 * height, 6);
-   c.drawCircle();
+   c.drawCircle(1);
 
 }
 
@@ -376,47 +399,118 @@ void drawTempPoint(void)
 void drawGrid(void)
 {
    int i;
-   
+
+   int w, z;
+   float p, q;
+
+   if (sizeGrid == 1) w = 9, z = 9, p = 0.1, q = 0.1;
+   if (sizeGrid == 2) w = 4, z = 4, p = 0.2, q = 0.2;
+   if (sizeGrid == 3) w = 3, z = 3, p = 0.3333333, q = 0.3333333;
+
    glEnable(GL_LINE_STIPPLE);
    glLineStipple(1, 0x5555); 
    glColor3f(0.75, 0.75, 0.75);
 
    glBegin(GL_LINES);
-	  for (i=2; i <=9; i++)
+	  for (i=1; i <= w; i++)
 	  {
-         glVertex3f(i*0.1*width, 0.0, 0.0);
-         glVertex3f(i*0.1*width, height, 0.0);
+         glVertex3f((width * 0.1) + i*p*(width * 0.9), 0.0, 0.0);
+         glVertex3f((width * 0.1) + i*p*(width * 0.9), height, 0.0);
 	  }
-	  for (i=1; i <=9; i++)
+	  for (i=1; i <= z; i++)
 	  {
-         glVertex3f(0.1*width, i*0.1*height, 0.0);
-         glVertex3f(width, i*0.1*height, 0.0);
+         glVertex3f(0.1*width, i*q*height, 0.0);
+         glVertex3f(width, i*q*height, 0.0);
 	  }
    glEnd();
    glDisable(GL_LINE_STIPPLE);
+}
+
+void dynamicDraw() {
+    // Update the location of the current point as the mouse moves with no button pressed.
+    if (pointCount){
+        switch (primitive) {
+            case CIRCLE: {
+                Circle c = Circle(tempX, tempY, tempX2 , tempY2, 360);
+                c.drawCircle();
+                break;
+            }
+            case LINE:
+            case POLYLINE: {
+                Line l = Line(tempX, tempY, tempX2 , tempY2);
+                l.drawLine();
+                break;
+            }
+            case RECTANGLE: {
+                Rectangle x = Rectangle(tempX, tempY, tempX2 , tempY2);
+                x.drawRectangle();
+                break;
+            }
+            case HEXAGON: {
+                Circle x = Circle(tempX, tempY, tempX2 , tempY2, 6);
+                x.drawCircle();
+                break;
+            }
+            case POINT: {
+                Point x = Point(tempX, tempY);
+                x.drawPoint();
+                break;
+            }
+            default:
+                break;
+        }
+    }
+}
+
+char * getDrawName() {
+    switch (primitive) {
+        case POINT:
+            return (char *) "Point";
+        case RECTANGLE:
+            return (char *) "Rectangle";
+        case LINE:
+            return (char *) "Line";
+        case POLYLINE:
+            return (char *) "Polyline";
+        case HEXAGON:
+            return (char *) "Hexagon";
+        case CIRCLE:
+            return (char *) "Circle";
+        default:
+            return (char *) "Nada selecionado";
+    }
 }
 
 // Drawing routine.
 void drawScene(void)
 {
    glClear(GL_COLOR_BUFFER_BIT);
-   glColor3f(0.0, 0.0, 0.0); 
+   glColor3f(0.0, 0.0, 0.0);
 
    drawPointSelectionBox();
    drawLineSelectionBox();
    drawRectangleSelectionBox();
    drawPolylineSelectionBox();
    drawCircleSelectionBox();
-    drawHexagonSelectionBox();
+   drawHexagonSelectionBox();
    drawInactiveArea();
 
-   drawPoints();
-   drawLines();
-   drawRectangles();
-   drawCircles();
+    glEnable(GL_LINE_STIPPLE);
+        glLineStipple(5, stipple);
+       drawPoints();
+       drawLines();
+       drawRectangles();
+       drawCircles();
+       dynamicDraw();
+    glDisable(GL_LINE_STIPPLE);
+
    if ( (primitive != INACTIVE) && (primitive != POINT) &&
 	   (pointCount == 1) ) drawTempPoint();
    if (isGrid) drawGrid();
+
+    glColor3f(0.0, 0.0, 0.0);
+    glRasterPos3f(width * 0.1, height * 0.01, 0.0);
+    writeBitmapString((void*)font, getDrawName());
 
    glutSwapBuffers();
 }
@@ -431,6 +525,11 @@ void pickPrimitive(int y)
    else if ( y < (1 - 2*0.1)*height ) primitive = RECTANGLE;
    else if ( y < (1 - 1*0.1)*height ) primitive = LINE;
    else primitive = POINT;
+}
+
+void startDrawing(int x, int y) {
+    tempX = x; tempY = y; tempX2 = x; tempY2 = y;
+    pointCount++;
 }
 
 // The mouse callback routine.
@@ -458,8 +557,7 @@ void mouseControl(int button, int state, int x, int y)
 		 { 
 	        if (pointCount == 0)
 			{
-               tempX = x; tempY = y;
-		       pointCount++;
+                startDrawing(x, y);
 			}
 	        else 
 			{
@@ -471,8 +569,7 @@ void mouseControl(int button, int state, int x, int y)
 		 {
 	        if (pointCount == 0)
 			{
-               tempX = x; tempY = y;
-		       pointCount++;
+                startDrawing(x, y);
 			}
 	        else
 			{
@@ -485,8 +582,7 @@ void mouseControl(int button, int state, int x, int y)
 		 { 
 	        if (pointCount == 0)
 			{
-               tempX = x; tempY = y;
-		       pointCount++;
+                startDrawing(x, y);
 			}
 	        else 
 			{
@@ -498,8 +594,7 @@ void mouseControl(int button, int state, int x, int y)
 		 {
 	        if (pointCount == 0)
 			{
-               tempX = x; tempY = y;
-		       pointCount++;
+                startDrawing(x, y);
 			}
 	        else
 			{
@@ -511,8 +606,7 @@ void mouseControl(int button, int state, int x, int y)
 		 {
 	        if (pointCount == 0)
 			{
-               tempX = x; tempY = y;
-		       pointCount++;
+                startDrawing(x, y);
 			}
 	        else
 			{
@@ -523,7 +617,14 @@ void mouseControl(int button, int state, int x, int y)
 	  }
    }
    if (button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN) pointCount = 0;
-   glutPostRedisplay();
+    glutPostRedisplay();
+}
+
+// Mouse motion callback routine.
+void mousePassiveMotion(int x, int y)
+{
+    tempX2 = x; tempY2 = height - y;
+    glutPostRedisplay();
 }
 
 // Initialization routine.
@@ -593,6 +694,63 @@ void grid_menu(int id)
    glutPostRedisplay();
 }
 
+void colorsMenu(int id) {
+    if (id==5)
+    {
+        color[0] = 0.0; color[1] = 0.0; color[2] = 0.0;
+    }
+    if (id==6)
+    {
+        color[0] = 1.0; color[1] = 0.0; color[2] = 0.0;
+    }
+    if (id==7)
+    {
+        color[0] = 0.0; color[1] = 1.0; color[2] = 0.0;
+    }
+    if (id==8)
+    {
+        color[0] = 0.0; color[1] = 0.0; color[2] = 1.0;
+    }
+    glutPostRedisplay();
+}
+
+void getStipple(int id) {
+    if (id==1)
+    {
+        stipple = 0xFFFF;
+    }
+    if (id==2)
+    {
+        stipple = 0x0101;
+    }
+    if (id==3)
+    {
+        stipple = 0x5555;
+    }
+    if (id==4)
+    {
+        stipple = 0x00FF;
+    }
+    glutPostRedisplay();
+}
+
+void getDrawBack(int id) {
+    if (id==1)
+    {
+        drawBack = GL_FILL;
+    }
+    if (id==2)
+    {
+        drawBack = GL_LINE;
+    }
+    glutPostRedisplay();
+}
+
+void getSizeGrid(int id) {
+    sizeGrid = id;
+    glutPostRedisplay();
+}
+
 // Function to create menu.
 void makeMenu(void)
 {
@@ -601,8 +759,33 @@ void makeMenu(void)
    glutAddMenuEntry("On", 3);
    glutAddMenuEntry("Off",4);
 
+   int colors = glutCreateMenu(colorsMenu);
+    glutAddMenuEntry("Black", 5);
+    glutAddMenuEntry("Red",6);
+    glutAddMenuEntry("Green",7);
+    glutAddMenuEntry("Blue",8);
+
+    int subStipple = glutCreateMenu(getStipple);
+    glutAddMenuEntry("0xFFFF", 1);
+    glutAddMenuEntry("0x0101", 2);
+    glutAddMenuEntry("0x5555", 3);
+    glutAddMenuEntry("0x00FF", 4);
+
+    int subDrawBack = glutCreateMenu(getDrawBack);
+    glutAddMenuEntry("Filled", 1);
+    glutAddMenuEntry("Outlined", 2);
+
+    int subSizeGrid = glutCreateMenu(getSizeGrid);
+    glutAddMenuEntry("1x", 1);
+    glutAddMenuEntry("2x", 2);
+    glutAddMenuEntry("3x", 3);
+
    glutCreateMenu(rightMenu);
    glutAddSubMenu("Grid", sub_menu);
+   glutAddSubMenu("Size grid", subSizeGrid);
+   glutAddSubMenu("Colors", colors);
+   glutAddSubMenu("Stipple", subStipple);
+   glutAddSubMenu("Outlined/Filled", subDrawBack);
    glutAddMenuEntry("Clear",1);
    glutAddMenuEntry("Quit",2);
    glutAttachMenu(GLUT_RIGHT_BUTTON);
@@ -630,7 +813,9 @@ int main(int argc, char **argv)
    glutDisplayFunc(drawScene); 
    glutReshapeFunc(resize);  
    glutKeyboardFunc(keyInput);
-   glutMouseFunc(mouseControl); 
+   glutMouseFunc(mouseControl);
+    // Register the mouse passive motion callback function.
+    glutPassiveMotionFunc(mousePassiveMotion);
 
    makeMenu(); // Create menu.
 

@@ -48,7 +48,7 @@ void drawScene(void)
 		 writeBitmapString((void*)font, "No stipple");
          break;	
       case 1: 
-		 glLineStipple(5, 0x0101); 
+		 glLineStipple(5, 0x5555);
 		 writeBitmapString((void*)font, "glLineStipple(1, 0x5555)");
          break;	  
       case 2:
