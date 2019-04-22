@@ -328,6 +328,12 @@ void drawCartesianPlace(void) {
 
     int cubeScale = 5;
 
+    glPushMatrix();
+
+    glTranslatef(coordX, coordY, 0.0); // Translate back.
+    glRotatef(degrees, 0.0, 0.0, 1.0); // Rotate about origin.
+    glTranslatef(-coordX, -coordY, 0.0); // Translate to origin.
+
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     glBegin(GL_POLYGON);
         glColor3f(1.0, 0.0, 0.0);
@@ -342,8 +348,7 @@ void drawCartesianPlace(void) {
         glColor3f(1.0, 1.0, 0.0);
         glVertex3f(coordX + (float)(scaleX * cubeScale), coordY + (float)(scaleY * cubeScale), 0.0);
     glEnd();
-
-
+    glPopMatrix();
     if (scaleX == 0 || scaleY == 0) glColor3f(0.0, 128.0, 0.0);
     else glColor3f(1.0, 1.0, 1.0);
     Point px = Point(coordX, coordY);
