@@ -27,7 +27,6 @@ void fill(int m[][TAM], FILE * f) {
 }
 
 void calc(int ma[][TAM], int mb[][TAM], int index) {
-
     char name[50];
 
     sprintf(name, "processo%d.txt", index + 1);
@@ -52,26 +51,6 @@ void calc(int ma[][TAM], int mb[][TAM], int index) {
     fclose(f);
 }
 
-void createProcess(int ma[][TAM], int mb[][TAM], int index) {
-    if (index < 0) {
-        return;
-    }
-
-    pid_t pid = fork();
-
-    if (pid < 0) {
-        // fork failed
-        perror("fork()  falied\n");
-        exit(1);
-    }
-    if (pid == 0) return;
-
-    calc(ma, mb, index);
-
-    createProcess(ma, mb, --index);
-
-}
-
 int main() {
 
     FILE * ma, * mb;
@@ -79,60 +58,64 @@ int main() {
     mb = fopen("matrizB.txt", "r");
 
     if (!ma || !mb) {
-            perror("Error while opening the file.\n");
-            exit(1);
+        perror("Error while opening the file.\n");
+        exit(1);
     }
 
     fscanf(ma, "%d", &TAM); // Iniciando o Tamanho da matriz com o primeiro valor no arquivo matrizA.txt
 
-    pid_t pid = fork();
-
     int matrizA[TAM][TAM], matrizB[TAM][TAM];
+    pid_t pid[TAM];
+    int proc;
+       
+    // child process
+    fill(matrizA, ma);
+    fill(matrizB, mb);
 
-    if (pid < 0) {
-        // fork failed
-        printf("fork()  falied\n");
-        return 1;
+    //Aqui é feita a criação dos processo que farão a multiplicação das matrizes
+    for(int i=0;i<TAM;i++){
+        pid[i] = fork();
+        proc = i;
+        if(pid[i]==0) break;
+        printf("%d - %d \n",pid[i],i);
     }
 
-    // Criando os processos e fazendo os calculos
-    if (pid == 0) {
-        // child process
+    if(pid[proc]==0){
+        //Aqui deve ser feita a multiplicação e 'salvamento' das matrizes nos arquivos auxiliares.
+        calc(matrizA, matrizB, proc);
+        printf("%d %d %d %d\n",pid[0],pid[1],pid[2],pid[3]);
+        printf("Processo %d morreu!\n",getpid());
+    }else{
+        for(int i=0;i<TAM;i++){
+            waitpid(pid[i],NULL,0);
+        }
+        //Aqui o pai junta os arquivos auxiliares para gerar um único arquivo com o resultado
+        char info[TAM * 3];
 
-        fill(matrizA, ma);
-        fill(matrizB, mb);
+        FILE * result = fopen("resultado.txt", "w"); // Criando arquivo com os resultados
 
-        createProcess(matrizA, matrizB, TAM - 1);
+        // Varrendo todos os arquivos de processos criados para pegar as respostas
+        for (int i = 0; i < TAM; ++i) {
+            char name[50];
 
-        return 0;
-    }
+            sprintf(name, "processo%d.txt", i + 1);
 
-    // Esperando pelo fim dos processos
-    wait(NULL);
+            FILE * f = fopen(name, "r");
 
-    char info[TAM * 3];
+            // Transferindo o resultado de um processo para o arquivo de resposta
+            fgets(info, sizeof(info), f);
+            fprintf(result, "%s\n", info);
 
-    FILE * result = fopen("resultado.txt", "w"); // Criando arquivo com os resultados
-
-    // Varrendo todos os arquivos de processos criados para pegar as respostas
-    for (int i = 0; i < TAM; ++i) {
-        char name[50];
-
-        sprintf(name, "processo%d.txt", i + 1);
-
-        FILE * f = fopen(name, "r");
-
-        // Transferindo o resultado de um processo para o arquivo de resposta
-        fgets(info, sizeof(info), f);
-        fprintf(result, "%s\n", info);
+            fclose(f);
+        
+        }
+        fclose(result);
+        printf("Pai morreu!\n");
     }
 
 
     fclose(ma);
     fclose(mb);
-    fclose(result);
-
-    printf("\n\nDone\n");
 
    return 0;
 }
