@@ -5,15 +5,15 @@ if len(sys.argv) != 2:
     print("Numero de parametros inválidos!")
     exit()
 
-UDP_ID = socket.gethostname()
-UDP_PORT = int(sys.argv[1])
+IP = '' # É como usar INADDR_ANY
+PORTA = int(sys.argv[1])
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.bind((UDP_ID, UDP_PORT))
+sock.bind((IP, PORTA))
 
-print("Servidor aberto em: {}:{}".format(socket.gethostbyname(UDP_ID), UDP_PORT))
+print("Servidor aberto na porta: {}".format(PORTA))
 
 while True:
-    data, (ip, port) = sock.recvfrom(1024) # buffer size is 1024 bytes
-    print ("received message:", data.decode(), ip, port)
-    sock.sendto("Que viadao bonito".encode(), (ip, port))
+    mensagem, (ipCliente, portaCliente) = sock.recvfrom(1024)
+    print ("received message:", mensagem.decode(), ipCliente, portaCliente)
+    sock.sendto("Hey boy".encode(), (ipCliente, portaCliente))
