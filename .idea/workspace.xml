@@ -14,12 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/SO/multMatrizSocket/main" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SO/multMatrizSocket/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SO/multMatrizSocket/matrizA.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SO/multMatrizSocket/matrizB.txt" afterDir="false" />
+    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="Trab so">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/main" beforeDir="false" afterPath="$PROJECT_DIR$/SO/multMatrizSocket/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/SO/multMatrizSocket/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -33,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="360">
+              <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
             </state>
           </provider>
         </entry>
@@ -51,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cliente.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cliente.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RC/class/cliente.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="28" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="327">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -63,7 +61,7 @@
       <file leaf-file-name="servidor.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RC/class/servidor.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
+            <state relative-caret-position="855">
               <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
             </state>
           </provider>
@@ -72,7 +70,7 @@
       <file leaf-file-name="servidor-multplex.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RC/class/servidor-multplex.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="1155">
               <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
             </state>
           </provider>
@@ -89,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>drawRectangleSelectionBox</find>
       <find>pointCount</find>
       <find>glColor3f</find>
       <find>square_color</find>
@@ -116,6 +113,10 @@
       <find>ptrp</find>
       <find>buf</find>
       <find>falha na conexão</find>
+      <find>socklen_t *)</find>
+      <find>accept(</find>
+      <find>SOCK_STREAM</find>
+      <find>socket(</find>
     </findStrings>
     <replaceStrings>
       <replace>color</replace>
@@ -139,6 +140,7 @@
         <option value="$PROJECT_DIR$/SO/multMatriz/matrizA.txt" />
         <option value="$PROJECT_DIR$/SO/multMatriz/main.c" />
         <option value="$PROJECT_DIR$/SO/multMatrizSocket/main.c" />
+        <option value="$PROJECT_DIR$/RC/class/cliente.c" />
       </list>
     </option>
   </component>
@@ -256,7 +258,9 @@
       <workItem from="1557524774174" duration="2201000" />
       <workItem from="1557527179528" duration="7304000" />
       <workItem from="1558395361852" duration="267000" />
-      <workItem from="1558697392910" duration="7311000" />
+      <workItem from="1558697392910" duration="7645000" />
+      <workItem from="1558783641166" duration="3000000" />
+      <workItem from="1558873099288" duration="9154000" />
     </task>
     <task id="LOCAL-00001" summary="Finalização do trabalho de CG">
       <created>1555610387473</created>
@@ -279,11 +283,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555977032889</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Trab so">
+      <created>1558704933619</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558704933623</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89676000" />
+    <option name="totallyTimeSpent" value="102164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
@@ -291,13 +302,14 @@
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15972589" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32982087" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" visible="true" weight="0.32455215" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" visible="true" weight="0.29083246" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -310,11 +322,11 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15972589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -337,7 +349,8 @@
     <MESSAGE value="Finalização do trabalho de CG" />
     <MESSAGE value="Git pull" />
     <MESSAGE value="Finishing geometric transformation CG" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing geometric transformation CG" />
+    <MESSAGE value="Trab so" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trab so" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,15 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RC/class/servidor-multplex.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="1155">
           <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/class/cliente.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -577,7 +583,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RC/class/servidor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
+        <state relative-caret-position="855">
           <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
         </state>
       </provider>
@@ -591,8 +597,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="360">
+          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/class/cliente.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>

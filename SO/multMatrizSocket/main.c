@@ -1,3 +1,4 @@
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/wait.h>
@@ -9,7 +10,7 @@
 #include <netinet/in.h>
 
 int TAM = 0;
-#define PORTA 5000
+int PORTA = 5000;
 
 
 void exibir(int Matriz[][TAM],int row,int col) {
@@ -58,7 +59,7 @@ void client(char * msg) {
         fprintf(stderr, "Falha o tentar enviar");
         exit(1);
     }
-    printf("Message: %s\n", msg);
+    printf("Messagem enviada: %s\n", msg);
     close(sd);
 }
 
@@ -75,12 +76,63 @@ void calc(int ma[][TAM], int mb[][TAM], int index) {
         sprintf(sResult, "%s %d", sResult, result);
         result = 0;
     }
-    sprintf(sResult, "%s%c", sResult, '\0');
+    sprintf(sResult, "%s %d%c", sResult, index, '\0');
     client(sResult);
 
 }
 
+int countConnections = 0;
+
+void waitConnections(int sd) {
+    printf("Se preparando para receber dados\n");
+    struct sockaddr_in cad; // estruta que armazena o endereço dos clientes
+    int alen, sd2;
+    int iBytes;
+    char value[2000];
+    alen = sizeof(struct sockaddr_in);
+    memset((char *) &cad, 0, sizeof(cad)); // Limpa a estrutura sockaddr
+
+    char resp[TAM][TAM * 3];
+
+
+    // loop do servidor, aceite as conexões e mantenha os pedidos de conexão
+    while(countConnections != TAM) {
+        if((sd2 = accept(sd, (struct sockaddr *)&cad, (socklen_t *) & alen)) < 0) {
+            fprintf(stderr, "Falha na função accept\n");
+            exit(1);
+        }
+
+        // Recebe a resposta enviada pelo processo filho
+        if ((iBytes = recv(sd2 , value , sizeof(value), 0)) < 0){
+            fprintf(stderr, "recv: %s (%d)\n", strerror(errno), errno);
+            printf("Erro ao receber dados na conexão: %d\n", countConnections);
+            exit(1);
+        }
+
+        value[iBytes] = '\0';
+
+        // Tratando a ordem em que os dados serão gravados no arquivo
+        int index = value[iBytes - 1] - '0';
+        value[iBytes - 1] = '\0';
+        strcpy(resp[index], value);
+
+        countConnections++;
+        close(sd2);
+    }
+
+    FILE * result = fopen("resultado.txt", "w"); // Criando arquivo com os resultados
+
+
+    int i,j;
+    for(i=0;i<TAM;i++){
+        // Adiciona o resultado no arquivo
+        fprintf(result, "%s\n", resp[i]);
+    }
+    fclose(result);
+}
+
 int server() {
+    printf("Iniciando servidor\n");
     struct sockaddr_in sad; // estrutura que armazena o endereço do servidor
 
 
@@ -93,10 +145,15 @@ int server() {
     sad.sin_port = htons(PORTA);
 
 
-    sd = socket(AF_INET, SOCK_STREAM, 0);
+    if ((sd = socket(PF_INET, SOCK_STREAM, 0)) == 0){
+        perror("socket: ");
+        exit(1);
+    }
+
+    printf("Sock %d\n", sd);
 
     if (bind(sd, (struct sockaddr *) & sad, sizeof(sad)) < 0) {
-        fprintf(stderr, "Falha no bind\n");
+        perror("bind: ");
         exit(1);
     }
 
@@ -104,49 +161,11 @@ int server() {
         fprintf(stderr, "Falha na função listen\n");
         exit(1);
     }
+    printf("Servidor escutando\n");
 
     return sd;
 }
 
-int countConnections = 0;
-
-void waitConnections(int sd) {
-    struct sockaddr_in cad; // estruta que armazena o endereço dos clientes
-    int alen, sd2; // tamanho do endereço
-
-    memset((char *) &cad, 0, sizeof(cad)); // Limpa a estrutura sockaddr
-
-    FILE * result = fopen("resultado.txt", "w"); // Criando arquivo com os resultados
-
-    // loop do servidor, aceite as conexões e mantenha os pedidos de conexão
-    while(countConnections != TAM) {
-        alen = sizeof(cad);
-
-        //Aqui o pai junta os arquivos auxiliares para gerar um único arquivo com o resultado
-        char value[2000];
-        value[0] = '\0';
-
-        if((sd2 = accept(sd, (struct sockaddr *)&cad, &alen) < 0)) {
-            fprintf(stderr, "Falha na função accept\n");
-            exit(1);
-        }
-
-        // Recebe a resposta enviada pelo processo filho
-        recv(sd2 , value , 2000, 0);
-
-        printf("Result: %s\n", value);
-
-        // Adiciona o resultado no arquivo
-        fprintf(result, "%s\n", value);
-
-        countConnections++;
-
-
-        close(sd2);
-    }
-
-    fclose(result);
-}
 
 int main() {
 
@@ -185,6 +204,7 @@ int main() {
         for(int i=0;i<TAM;i++){
             waitpid(pid[i],NULL,0);
         }
+
         waitConnections(sd);
         printf("Pai morreu!\n");
     }
