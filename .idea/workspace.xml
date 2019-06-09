@@ -14,10 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="Trab so">
+    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="Finalizando trabalho de SO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/main" beforeDir="false" afterPath="$PROJECT_DIR$/SO/multMatrizSocket/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/SO/multMatrizSocket/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/cliente.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/servidor.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -28,50 +28,34 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/main.c">
+      <file leaf-file-name="servidorMultThread.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RC/class/servidorMultThread.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+            <state relative-caret-position="1140">
+              <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resultado.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/resultado.txt">
+      <file leaf-file-name="servidor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="240">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cliente.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RC/class/cliente.c">
+      <file leaf-file-name="cliente.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="servidor.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RC/class/servidor.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="servidor-multplex.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RC/class/servidor-multplex.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+            <state relative-caret-position="210">
+              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -87,8 +71,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pointCount</find>
-      <find>glColor3f</find>
       <find>square_color</find>
       <find>drawCircle(</find>
       <find>drawSc</find>
@@ -117,9 +99,12 @@
       <find>accept(</find>
       <find>SOCK_STREAM</find>
       <find>socket(</find>
+      <find>thread_proc</find>
+      <find>controlThread</find>
     </findStrings>
     <replaceStrings>
       <replace>color</replace>
+      <replace>lock</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -141,6 +126,8 @@
         <option value="$PROJECT_DIR$/SO/multMatriz/main.c" />
         <option value="$PROJECT_DIR$/SO/multMatrizSocket/main.c" />
         <option value="$PROJECT_DIR$/RC/class/cliente.c" />
+        <option value="$PROJECT_DIR$/RC/trab/cliente.py" />
+        <option value="$PROJECT_DIR$/RC/trab/servidor.py" />
       </list>
     </option>
   </component>
@@ -165,48 +152,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
+              <item name="college-third-year" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/College/college-third-year" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="SO" type="462c0819:PsiDirectoryNode" />
+              <item name="college-third-year" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/College/college-third-year" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="RC" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="SO" type="462c0819:PsiDirectoryNode" />
-              <item name="multMatriz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="SO" type="462c0819:PsiDirectoryNode" />
-              <item name="multMatrizSocket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="TC" type="462c0819:PsiDirectoryNode" />
+              <item name="college-third-year" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Documents/College/college-third-year" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="RC" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="trab" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CMake" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Work/bemarke" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -227,12 +205,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.college-third-year">
+  <component name="RunManager" selected="Python.start">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
     <configuration name="college-third-year" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="college-third-year" TARGET_NAME="college-third-year" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="college-third-year" RUN_TARGET_NAME="college-third-year" />
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python">
+      <module name="college-third-year" />
+      <option name="INTERPRETER_OPTIONS" value="python3" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../LFA/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <list>
-      <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.college-third-year" />
+      <item itemvalue="Python.start" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -260,7 +256,9 @@
       <workItem from="1558395361852" duration="267000" />
       <workItem from="1558697392910" duration="7645000" />
       <workItem from="1558783641166" duration="3000000" />
-      <workItem from="1558873099288" duration="9154000" />
+      <workItem from="1558873099288" duration="9217000" />
+      <workItem from="1559497199466" duration="346000" />
+      <workItem from="1559605582849" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Finalização do trabalho de CG">
       <created>1555610387473</created>
@@ -290,51 +288,65 @@
       <option name="project" value="LOCAL" />
       <updated>1558704933623</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finalizando trabalho de SO">
+      <created>1558883181661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558883181662</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102164000" />
+    <option name="totallyTimeSpent" value="102605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15972589" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32982087" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" weight="0.2897787" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16435432" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" visible="true" weight="0.29083246" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
+      <window_info anchor="right" id="Mongo Explorer" order="4" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15972589" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" visible="true" weight="0.32455215" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="CMake" order="10" weight="0.32982087" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -350,27 +362,34 @@
     <MESSAGE value="Git pull" />
     <MESSAGE value="Finishing geometric transformation CG" />
     <MESSAGE value="Trab so" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trab so" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="4" />
-    </breakpoint-manager>
+    <MESSAGE value="Finalizando trabalho de SO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizando trabalho de SO" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TC/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/CG/experiment/square.cpp" />
-    <entry file="file://$PROJECT_DIR$/TC/sudoku.c">
+    <entry file="file://$PROJECT_DIR$/RC/class/servidorMultThread.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        <state relative-caret-position="1140">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TC/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/TC/jogoDaVelha.c" />
-    <entry file="file://$PROJECT_DIR$/TC/sodoku.c" />
-    <entry file="file://$PROJECT_DIR$/CG/experiment/square.cpp" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CG/book/square.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -378,14 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TC/sudoku.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TC/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/CG/class/hemisphere.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
@@ -393,14 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TC/sudoku.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TC/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/TC/jogoDaVelha.c" />
     <entry file="file://$PROJECT_DIR$/TC/sodoku.c" />
     <entry file="file://$PROJECT_DIR$/TC/CMakeLists.txt" />
@@ -419,9 +422,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch..txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch..txt" />
     <entry file="file://$PROJECT_DIR$/RC/class/bind.c">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -553,24 +554,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/class/servidorMultThread.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RC/class/servidor-fork.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="584">
           <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/class/servidor-multplex.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -581,31 +568,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RC/class/servidor-multplex.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/class/cliente.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RC/class/servidor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="600">
+          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/resultado.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="892">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/class/cliente.c">
+    <entry file="file://$PROJECT_DIR$/RC/class/servidorMultThread.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="1140">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

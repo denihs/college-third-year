@@ -10,5 +10,9 @@ UDP_IP = sys.argv[1]
 UDP_PORT = int(sys.argv[2])
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-print(UDP_IP, UDP_PORT)
-sock.sendto("Everything is gonna be just fine".encode(), (UDP_IP, UDP_PORT))
+
+sock.sendto("D, 1, 2, 0, (40;50)".encode(), (UDP_IP, UDP_PORT))
+
+mensagem, server = sock.recvfrom(1024)
+
+print(mensagem.decode())
