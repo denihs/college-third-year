@@ -4,6 +4,7 @@ import socket
 import threading
 import sys
 import json
+from math import radians, cos, sin, asin, sqrt
 
 def comandoInvalido(comando):
     if len(comando) != 5:
@@ -30,15 +31,64 @@ def gravarDados(comando):
 
     dados.append({
         "tipoCombustivel": comando[2],
-        "valor": comando[3],
+        "valor": int(comando[3]),
         "coordenadas": comando[4]
     })
 
-    json.dump(dados, arq)
+    json.dump(dados, arq, indent=2)
 
     arq.close()
 
     return "Dados gravados"
+
+def haversineFormula(latI, lonI, lat, lon):
+    """
+        Essa formula irá calcular a distância entre dois pontos na terra
+        (com lon e lat especificados em graus decimais). Os calculos são
+        baseados na terra circular, desconsiderando os efeitos elipsionáis
+    """
+
+    # convertendo os graus decimais para radianos
+    latI, lonI, lat, lon = map(radians, map(float, [latI, lonI, lat, lon]))
+
+    # aplicando a fórmula
+    dlon = lon - lonI
+    dlat = lat - latI
+
+    # Quadrado da metade do comprimento do acorde entre os pontos
+    a = sin(dlat / 2) ** 2 + cos(latI) * cos(lat) * sin(dlon / 2) ** 2
+
+    # Distância angular em radianos
+    c = 2 * asin(min(1, sqrt(a)))
+
+    R = 6371  # Raio da terra em quilômetros
+
+    return R * c
+
+def pegarCoordenadas(coord):
+    return coord.replace(" ", "")[1:-1].split(";")
+
+def buscarResultado(dados, tipoCombustivel, raio, coord):
+    # filtrando todos os registros com o tipo de combustível requisitado
+    resutados = list(filter(lambda item: int(item["tipoCombustivel"]) == tipoCombustivel, dados))
+
+    dadosEncontrados = []
+
+    # Calculado distâncias e salvando os postos dentro do raio
+    for item in resutados:
+        latP, lonP = pegarCoordenadas(item["coordenadas"])
+        lat, lon = pegarCoordenadas(coord)
+
+        distancia = haversineFormula(latP, lonP, lat, lon)
+
+        if distancia <= raio:
+            dadosEncontrados.append(item)
+
+    # Buscando dentro os dados encontrados o de menor preço
+    if len(dadosEncontrados) > 0:
+        return min(dadosEncontrados, key=lambda x: x['valor'])
+
+    return False
 
 def buscarDados(comando):
     msgComandoInvalido = comandoInvalido(comando)
@@ -53,12 +103,15 @@ def buscarDados(comando):
         return "Nenhum valor encontrado!"
 
     tipoCombustivel = int(comando[2])
-    resutados = list(filter(lambda item: int(item["tipoCombustivel"]) == tipoCombustivel, dados))
+    raio = float(comando[3])
+    coord = comando[4]
 
-    if len(resutados) > 0:
+    resultado = buscarResultado(dados, tipoCombustivel, raio, coord)
+
+    if resultado:
         tc = ['diesel', 'álcool', 'gasolina']
-        valor = int(resutados[0]["valor"]) / 1000
-        return "Tipo combustível: {}\nPreço: R${}\ncoordenadas: {}".format(tc[tipoCombustivel], valor, resutados[0]["coordenadas"])
+        valor = int(resultado["valor"]) / 1000
+        return "Tipo combustível: {}\nPreço: R${: .3f}\ncoordenadas: {}".format(tc[tipoCombustivel], valor, resultado["coordenadas"])
 
 
     return "Nenhuma posto encontrado para esses parâmetros."

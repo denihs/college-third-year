@@ -1,0 +1,47 @@
+[
+  {
+    "tipoCombustivel": "0",
+    "valor": 4000,
+    "coordenadas": "(-22.217551;-54.765349)"
+  },
+  {
+    "tipoCombustivel": "0",
+    "valor": 3989,
+    "coordenadas": "(-22.226945;-54.807717)"
+  },
+  {
+    "tipoCombustivel": "0",
+    "valor": 4989,
+    "coordenadas": "(-22.223665;-54.771388)"
+  },
+  {
+    "tipoCombustivel": "1",
+    "valor": 2999,
+    "coordenadas": "(-22.217551;-54.765349)"
+  },
+  {
+    "tipoCombustivel": "1",
+    "valor": 3989,
+    "coordenadas": "(-22.226945;-54.807717)"
+  },
+  {
+    "tipoCombustivel": "1",
+    "valor": 5000,
+    "coordenadas": "(-22.223665;-54.771388)"
+  },
+  {
+    "tipoCombustivel": "2",
+    "valor": 6000,
+    "coordenadas": "(-22.217551;-54.765349)"
+  },
+  {
+    "tipoCombustivel": "2",
+    "valor": 5343,
+    "coordenadas": "(-22.226945;-54.807717)"
+  },
+  {
+    "tipoCombustivel": "2",
+    "valor": 3999,
+    "coordenadas": "(-22.223665;-54.771388)"
+  }
+]
