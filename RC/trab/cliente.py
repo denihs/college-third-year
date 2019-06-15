@@ -11,7 +11,7 @@ UDP_PORT = int(sys.argv[2])
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-sock.sendto("D, 1, 2, 0, (40;50)".encode(), (UDP_IP, UDP_PORT))
+sock.sendto("P, 0, 0, 5, (40;50)".encode(), (UDP_IP, UDP_PORT))
 
 mensagem, server = sock.recvfrom(1024)
 

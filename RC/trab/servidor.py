@@ -3,35 +3,83 @@
 import socket
 import threading
 import sys
+import json
 
-def gravarDados(comando):
+def comandoInvalido(comando):
     if len(comando) != 5:
         return "Número inválido de parametros para gravar dados"
 
     if len(comando[4].split(';')) != 2:
         return "Parâmetro de coordenadas inválido"
 
+    return False
+
+def gravarDados(comando):
+    msgComandoInvalido = comandoInvalido(comando)
+    if msgComandoInvalido:
+        return msgComandoInvalido
+
+    try:
+        arq = open("dados.json", "r")
+        dados = json.load(arq)
+        arq.close()
+    except:
+        dados = []
+
+    arq = open("dados.json", "w")
+
+    dados.append({
+        "tipoCombustivel": comando[2],
+        "valor": comando[3],
+        "coordenadas": comando[4]
+    })
+
+    json.dump(dados, arq)
+
+    arq.close()
+
     return "Dados gravados"
 
-def executar(comando):
-    comandoTratado = comando.strip().split(',')
+def buscarDados(comando):
+    msgComandoInvalido = comandoInvalido(comando)
+    if msgComandoInvalido:
+        return msgComandoInvalido
 
+    try:
+        arq = open("dados.json", "r")
+        dados = json.load(arq)
+        arq.close()
+    except:
+        return "Nenhum valor encontrado!"
+
+    tipoCombustivel = int(comando[2])
+    resutados = list(filter(lambda item: int(item["tipoCombustivel"]) == tipoCombustivel, dados))
+
+    if len(resutados) > 0:
+        tc = ['diesel', 'álcool', 'gasolina']
+        valor = int(resutados[0]["valor"]) / 1000
+        return "Tipo combustível: {}\nPreço: R${}\ncoordenadas: {}".format(tc[tipoCombustivel], valor, resutados[0]["coordenadas"])
+
+
+    return "Nenhuma posto encontrado para esses parâmetros."
+
+def executar(comando):
+    comandoTratado = comando.replace(" ", "").split(',')
     acao = comandoTratado[0].lower()
 
     if acao == 'd':
         return gravarDados(comandoTratado)
     elif acao == 'p':
-        print("Pesquisar dados")
+        return buscarDados(comandoTratado)
     else:
         return "Ação não conhecida: {}".format(acao)
 
-    return "Comando recebido: {}".format(comandoTratado[0])
 
 def log(cliente, comando):
     ipCliente, portaCliente = cliente
     print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
     print("Cliente conectado: {}:{}".format(ipCliente, portaCliente))
-    print("Comando enviado: {}".format(comando))
+    print("Comando recebido: {}".format(comando.decode()))
     print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
 
 def processarConexao(sock, lock):
