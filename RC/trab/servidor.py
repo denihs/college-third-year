@@ -7,10 +7,11 @@ import json
 from math import radians, cos, sin, asin, sqrt
 
 def comandoInvalido(comando):
-    if len(comando) != 5:
-        return "Número inválido de parametros para gravar dados"
+    for chave in comando:
+        if not comando[chave]:
+            return "O parâmetro {} não pode ser vazio".format(chave)    
 
-    if len(comando[4].split(';')) != 2:
+    if len(comando["coordenadas"].split(';')) != 2:
         return "Parâmetro de coordenadas inválido"
 
     return False
@@ -30,9 +31,9 @@ def gravarDados(comando):
     arq = open("dados.json", "w")
 
     dados.append({
-        "tipoCombustivel": comando[2],
-        "valor": int(comando[3]),
-        "coordenadas": comando[4]
+        "tipoCombustivel": comando["tipoCombustivel"],
+        "valor": int(comando["valor"]),
+        "coordenadas": comando["coordenadas"]
     })
 
     json.dump(dados, arq, indent=2)
@@ -102,9 +103,9 @@ def buscarDados(comando):
     except:
         return "Nenhum valor encontrado!"
 
-    tipoCombustivel = int(comando[2])
-    raio = float(comando[3])
-    coord = comando[4]
+    tipoCombustivel = int(comando["tipoCombustivel"])
+    raio = float(comando["raio"])
+    coord = comando["coordenadas"]
 
     resultado = buscarResultado(dados, tipoCombustivel, raio, coord)
 
@@ -117,13 +118,12 @@ def buscarDados(comando):
     return "Nenhuma posto encontrado para esses parâmetros."
 
 def executar(comando):
-    comandoTratado = comando.replace(" ", "").split(',')
-    acao = comandoTratado[0].lower()
+    acao = comando["acao"].lower()
 
     if acao == 'd':
-        return gravarDados(comandoTratado)
+        return gravarDados(comando)
     elif acao == 'p':
-        return buscarDados(comandoTratado)
+        return buscarDados(comando)
     else:
         return "Ação não conhecida: {}".format(acao)
 
@@ -132,18 +132,20 @@ def log(cliente, comando):
     ipCliente, portaCliente = cliente
     print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
     print("Cliente conectado: {}:{}".format(ipCliente, portaCliente))
-    print("Comando recebido: {}".format(comando.decode()))
+    print("Dados recebidos: {}".format(comando))
     print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
 
 def processarConexao(sock, lock):
     # Recebendo o comando do cliente
-    comando, (ipCliente, portaCliente) = sock.recvfrom(1024)
+    dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
+    
+    comando = json.loads(dados.decode())
 
     log((ipCliente, portaCliente), comando)
 
     # Bloqueando thread para acessar a zona critica do servidor
     lock.acquire()
-    resultado = executar(comando.decode())
+    resultado = executar(comando)
     lock.release()
 
     # Enviando resposta para o cliente
