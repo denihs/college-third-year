@@ -3,5 +3,20 @@
     "tipoCombustivel": "2",
     "valor": 5000,
     "coordenadas": "(-22.21532688695198;-54.75933148596293)"
+  },
+  {
+    "tipoCombustivel": 2,
+    "valor": 5000,
+    "coordenadas": "(-22.21532688695198;-54.75933148596293)"
+  },
+  {
+    "tipoCombustivel": 2,
+    "valor": 5000,
+    "coordenadas": "(-22.21532688695198;-54.75933148596293)"
+  },
+  {
+    "tipoCombustivel": 2,
+    "coordenadas": "(-22.21532688695198;-54.75933148596293)",
+    "valor": 5000
   }
 ]

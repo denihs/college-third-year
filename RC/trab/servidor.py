@@ -8,7 +8,7 @@ from math import radians, cos, sin, asin, sqrt
 
 def comandoInvalido(comando):
     for chave in comando:
-        if not comando[chave]:
+        if not comando[chave] and comando[chave] != 0:
             return "O parâmetro {} não pode ser vazio".format(chave)    
 
     if len(comando["coordenadas"].split(';')) != 2:
@@ -128,28 +128,66 @@ def executar(comando):
         return "Ação não conhecida: {}".format(acao)
 
 
-def log(cliente, comando):
-    ipCliente, portaCliente = cliente
-    print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
-    print("Cliente conectado: {}:{}".format(ipCliente, portaCliente))
-    print("Dados recebidos: {}".format(comando))
-    print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+def log(dados, info):
+
+    if info == "cliente":
+        ipCliente, portaCliente = dados
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+        print("Cliente conectado: {}:{}".format(ipCliente, portaCliente))
+    
+    if info == "comando":
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+        print("Dados recebidos: {}".format(dados))
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+
+    if info == "erro-cliente":
+        ipCliente, portaCliente = dados
+        print("Erro ao tentar conectar o cliente {}:{}".format(ipCliente, portaCliente))
+
+    
+
+def aceitarConexao(sock):
+    dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
+    dados = json.loads(dados.decode())
+
+    if dados["SYN"]:
+        pacote = {
+            "dados": None,
+            "SYN": True,
+            "ACK": True,
+            "FIN": False,
+            "seq": 0,
+            "proxSeq": 1
+        }
+        pacote["ack"] = dados["seq"] + 1
+        sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
+        
+        dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
+        resposta = json.loads(dados.decode())
+
+        if resposta["ACK"] and resposta["ack"] == pacote["proxSeq"]:
+            log((ipCliente, portaCliente), "cliente")
+            return True
+    log((ipCliente, portaCliente), "erro-cliente")
+    return False
 
 def processarConexao(sock, lock):
-    # Recebendo o comando do cliente
-    dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
-    
-    comando = json.loads(dados.decode())
+    if aceitarConexao(sock):
+        # Recebendo o comando do cliente
+        dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
+        
+        comando = json.loads(dados.decode())
 
-    log((ipCliente, portaCliente), comando)
+        log(comando, "comando")
 
-    # Bloqueando thread para acessar a zona critica do servidor
-    lock.acquire()
-    resultado = executar(comando)
-    lock.release()
+        # Bloqueando thread para acessar a zona critica do servidor
+        lock.acquire()
+        resultado = executar(comando)
+        lock.release()
 
-    # Enviando resposta para o cliente
-    sock.sendto(resultado.encode(), (ipCliente, portaCliente))
+        # Enviando resposta para o cliente
+        sock.sendto(resultado.encode(), (ipCliente, portaCliente))
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
