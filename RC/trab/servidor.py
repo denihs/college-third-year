@@ -5,6 +5,7 @@ import threading
 import sys
 import json
 from math import radians, cos, sin, asin, sqrt
+from comunicacao import aceitar, novoPacote
 
 def comandoInvalido(comando):
     for chave in comando:
@@ -144,39 +145,16 @@ def log(dados, info):
         ipCliente, portaCliente = dados
         print("Erro ao tentar conectar o cliente {}:{}".format(ipCliente, portaCliente))
 
-    
-
-def aceitarConexao(sock):
-    dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
-    dados = json.loads(dados.decode())
-
-    if dados["SYN"]:
-        pacote = {
-            "dados": None,
-            "SYN": True,
-            "ACK": True,
-            "FIN": False,
-            "seq": 0,
-            "proxSeq": 1
-        }
-        pacote["ack"] = dados["seq"] + 1
-        sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
-        
-        dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
-        resposta = json.loads(dados.decode())
-
-        if resposta["ACK"] and resposta["ack"] == pacote["proxSeq"]:
-            log((ipCliente, portaCliente), "cliente")
-            return True
-    log((ipCliente, portaCliente), "erro-cliente")
-    return False
-
 def processarConexao(sock, lock):
-    if aceitarConexao(sock):
+    resposta, cliente = aceitar(sock)
+    if resposta:
+        log(cliente, "cliente")
         # Recebendo o comando do cliente
-        dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
+        pacote, (ipCliente, portaCliente) = sock.recvfrom(1024)
         
-        comando = json.loads(dados.decode())
+        pacote = json.loads(pacote.decode())
+        
+        comando = pacote["dados"]
 
         log(comando, "comando")
 
@@ -185,9 +163,11 @@ def processarConexao(sock, lock):
         resultado = executar(comando)
         lock.release()
 
+        pacote = novoPacote(dados=resultado)
         # Enviando resposta para o cliente
-        sock.sendto(resultado.encode(), (ipCliente, portaCliente))
-
+        sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
+    else:
+        log(cliente, "erro-cliente")
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
