@@ -1,9 +1,11 @@
+# coding: utf-8
+
 import sys
 import json
 from comunicacao import conectar, novoPacote
 
 if len(sys.argv) != 3:
-    print("Numero de parametros inválidos!")
+    print("Numero de parâmetros inválidos!")
     exit()
 
 dadosGravar = {
@@ -32,10 +34,17 @@ if __name__ == '__main__':
 
     if sock:
         print("Conexão estabilizada")
-        sock.sendto(json.dumps(pacote).encode(), (UDP_IP, UDP_PORT))
+        resp = input("Enviar dados? s / n: ")
 
-        pacote, server = sock.recvfrom(1024)
-        dados = json.loads(pacote.decode())["dados"]
-        print(dados)
+        while resp == 's':
+            sock.sendto(json.dumps(pacote).encode(), (UDP_IP, UDP_PORT))
+            pacoteRec, server = sock.recvfrom(1024)
+            dados = json.loads(pacoteRec.decode())["dados"]
+            print(dados)
+            resp = input("Enviar dados? s / n")
+        # Finalizando a conexão
+        pac = novoPacote(FIN=True)
+        sock.sendto(json.dumps(pac).encode(), (UDP_IP, UDP_PORT))
+
     else:
         print("Falha na conexão com o servidor")
