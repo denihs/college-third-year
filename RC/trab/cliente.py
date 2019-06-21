@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
         # Finalizando a conexão
         pac = novoPacote(FIN=True)
-        sock.sendto(json.dumps(pac).encode(), (UDP_IP, UDP_PORT))
+        sock.sendto(json.dumps(pac).encode(), (UDP_IP, porta))
 
     else:
         print("Falha na conexão com o servidor")
