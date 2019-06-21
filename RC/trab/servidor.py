@@ -7,6 +7,14 @@ import json
 from math import radians, cos, sin, asin, sqrt
 from comunicacao import aceitar, novoPacote
 
+if len(sys.argv) != 2:
+    print("Numero de parametros inválidos!")
+    exit()
+
+IP = ''  # É como usar INADDR_ANY
+PORTA = int(sys.argv[1])
+NUMERO_CLIENTES = 0
+
 def comandoInvalido(comando):
     for chave in comando:
         if not comando[chave] and comando[chave] != 0:
@@ -134,29 +142,27 @@ def log(dados, info):
     if info == "cliente":
         ipCliente, portaCliente = dados
         print("Cliente conectado: {}:{}".format(ipCliente, portaCliente))
-        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "comando":
         comando, cliente = dados
         print("CLIENTE {}:{} -> Dados recebidos: {}".format(cliente[0], cliente[1], comando))
-        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "erro-cliente":
         ipCliente, portaCliente = dados
         print("Erro ao tentar conectar o cliente {}:{}".format(ipCliente, portaCliente))
-        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "desconectado":
         ipCliente, portaCliente = dados
         print("O cliente {}:{} encerrou a conexão".format(ipCliente, portaCliente))
-        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
+        print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
-def processarConexao(sock, lock, dados):
-    # Bloqueando thread para acessar a zona critica do servidor
+def processarConexao(lock, dados):
+    sock, cliente = aceitar(dados, NUMERO_CLIENTES, PORTA)
 
-    resposta, cliente = aceitar(sock, dados)
-
-    if resposta:
+    if sock:
         log(cliente, "cliente")
 
         sair = False
@@ -188,7 +194,7 @@ def processarConexao(sock, lock, dados):
 
                     # Enviando resposta para o cliente
                     pacote = novoPacote(dados=resultado, ack=pacoteCliente["seq"] + 1, ACK=True)
-                    print("Ack enviado: {}".format(pacote["ack"]))
+                    print("Ack enviado: {}\n".format(pacote["ack"]))
                     sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
                 else:
                     sock.sendto(json.dumps(novoPacote(dados="Sem dados enviados")).encode(), (ipCliente, portaCliente))
@@ -196,16 +202,11 @@ def processarConexao(sock, lock, dados):
             else:
                 sair = True
         log(cliente, "desconectado")
+        sock.close()
     else:
         log(cliente, "erro-cliente")
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("Numero de parametros inválidos!")
-        exit()
-
-    IP = '' # É como usar INADDR_ANY
-    PORTA = int(sys.argv[1])
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.bind((IP, PORTA))
@@ -215,17 +216,19 @@ if __name__ == '__main__':
     lock = threading.Lock()
 
     contador = 0
+    thread = None
 
     while True:
         print ("Dentro")
+        NUMERO_CLIENTES += 1
         dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
 
-        if not contador:
-            thread = threading.Thread(None, processarConexao, None, (sock, lock, (dados, ipCliente, portaCliente)))
+        thread = threading.Thread(None, processarConexao, None, (lock, (dados, ipCliente, portaCliente)))
 
-            thread.start() # iniciando os serviços na thread
+        thread.start() # iniciando os serviços na thread
 
         contador += 1
         if contador == 5:
             break
+    thread.join()
     sock.close()

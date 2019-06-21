@@ -4,7 +4,7 @@ import sys
 import json
 from comunicacao import conectar, novoPacote, transmitir
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 3:
     print("Numero de parâmetros inválidos!")
     exit()
 
@@ -37,23 +37,25 @@ def enviarDados(sock, IP, PORTA):
 
         if resp:
             auxPacote = pacote
-
             dados = resp["dados"]
             print(dados)
+            print("\n")
         else:
             print("Falha ao enviar os dados!")
-        resp = input("Enviar dados? s / n")
+            print("\n")
+        resp = input("Enviar dados? s / n: ")
 
 if __name__ == '__main__':
     UDP_IP = sys.argv[1]
     UDP_PORT = int(sys.argv[2])
-    OPORTA = int(sys.argv[3])
 
-    sock, resp = conectar(UDP_IP, UDP_PORT, OPORTA)
+    sock, resp = conectar(UDP_IP, UDP_PORT)
 
     if sock:
+        porta = resp
         print("Conexão estabilizada")
-        enviarDados(sock, UDP_IP, UDP_PORT)
+        print("\n")
+        enviarDados(sock, UDP_IP, porta)
 
         # Finalizando a conexão
         pac = novoPacote(FIN=True)
@@ -63,3 +65,5 @@ if __name__ == '__main__':
         print("Falha na conexão com o servidor")
         if resp["dados"]:
             print(resp["dados"])
+            print("\n")
+    sock.close()

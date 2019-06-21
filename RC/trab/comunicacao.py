@@ -14,36 +14,40 @@ def novoPacote(dados=None, SYN=False, ACK=False, FIN=False, ack=0, seq=0, proxSe
         "proxSeq": proxSeq
     }
 
-def conectar(IP, PORT, OPORTA):
+def conectar(IP, PORT):
     pacote = novoPacote(SYN=True, proxSeq=1)
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.bind((IP, OPORTA))
     sock.sendto(json.dumps(pacote).encode(), (IP, PORT))
     
-    data, server = sock.recvfrom(1024)
+    data, (ipServidor, portaServidor) = sock.recvfrom(1024)
     resposta = json.loads(data.decode())
     
     if resposta["SYN"] and resposta["ACK"] and resposta["ack"] == pacote["proxSeq"]:
         dadosDeConfirmacao = novoPacote(ACK=True, ack=resposta["seq"] + 1, seq=1)
-        sock.sendto(json.dumps(dadosDeConfirmacao).encode(), (IP, PORT))
-        return sock, None
+        sock.sendto(json.dumps(dadosDeConfirmacao).encode(), (ipServidor, portaServidor))
+        return sock, portaServidor
     return False, resposta
 
 
-def aceitar(sock, dadosCliente):
+def aceitar(dadosCliente, numeroCliente, PORTA):
     dados, ipCliente, portaCliente = dadosCliente
     dados = json.loads(dados.decode())
-    print(dados)
+
     if dados["SYN"]:
+        # Criando socket para o cliente
+        porta = PORTA + numeroCliente
+        sockCliente = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sockCliente.bind(("", porta))
+
         pacote = novoPacote(SYN=True, ACK=True, proxSeq=1, ack=dados["seq"] + 1)
-        sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
+        sockCliente.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
         
-        dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
+        dados, (ipCliente, portaCliente) = sockCliente.recvfrom(1024)
         resposta = json.loads(dados.decode())
 
         if resposta["ACK"] and resposta["ack"] == pacote["proxSeq"]:
-            return True, (ipCliente, portaCliente)
+            return sockCliente, (ipCliente, portaCliente)
     return False, (ipCliente, portaCliente)
 
 
