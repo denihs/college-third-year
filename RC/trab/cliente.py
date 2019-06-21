@@ -2,9 +2,9 @@
 
 import sys
 import json
-from comunicacao import conectar, novoPacote
+from comunicacao import conectar, novoPacote, transmitir
 
-if len(sys.argv) != 3:
+if len(sys.argv) != 4:
     print("Numero de parâmetros inválidos!")
     exit()
 
@@ -24,27 +24,42 @@ dadosPesquisa = {
     "coordenadas": "(-22.21532688695198;-54.75933148596293)"
 }
 
+def enviarDados(sock, IP, PORTA):
+    resp = input("Enviar dados? s / n: ")
+
+    auxPacote = novoPacote()
+
+    while resp == 's':
+        seq = auxPacote["seq"] + 1
+        pacote = novoPacote(dados=dadosPesquisa, seq=seq, proxSeq = seq + 1)
+
+        resp = transmitir(sock, pacote, IP, PORTA)
+
+        if resp:
+            auxPacote = pacote
+
+            dados = resp["dados"]
+            print(dados)
+        else:
+            print("Falha ao enviar os dados!")
+        resp = input("Enviar dados? s / n")
+
 if __name__ == '__main__':
     UDP_IP = sys.argv[1]
     UDP_PORT = int(sys.argv[2])
+    OPORTA = int(sys.argv[3])
 
-    pacote = novoPacote(dados=dadosPesquisa)
-
-    sock = conectar(UDP_IP, UDP_PORT)
+    sock, resp = conectar(UDP_IP, UDP_PORT, OPORTA)
 
     if sock:
         print("Conexão estabilizada")
-        resp = input("Enviar dados? s / n: ")
+        enviarDados(sock, UDP_IP, UDP_PORT)
 
-        while resp == 's':
-            sock.sendto(json.dumps(pacote).encode(), (UDP_IP, UDP_PORT))
-            pacoteRec, server = sock.recvfrom(1024)
-            dados = json.loads(pacoteRec.decode())["dados"]
-            print(dados)
-            resp = input("Enviar dados? s / n")
         # Finalizando a conexão
         pac = novoPacote(FIN=True)
         sock.sendto(json.dumps(pac).encode(), (UDP_IP, UDP_PORT))
 
     else:
         print("Falha na conexão com o servidor")
+        if resp["dados"]:
+            print(resp["dados"])

@@ -151,33 +151,48 @@ def log(dados, info):
         print("O cliente {}:{} encerrou a conexão".format(ipCliente, portaCliente))
         print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_')
 
-def processarConexao(sock, lock):
-    resposta, cliente = aceitar(sock)
+def processarConexao(sock, lock, dados):
+    # Bloqueando thread para acessar a zona critica do servidor
+
+    resposta, cliente = aceitar(sock, dados)
+
     if resposta:
         log(cliente, "cliente")
 
         sair = False
+        auxPacote = novoPacote()
 
         while not sair:
             # Recebendo o comando do cliente
-            pacote, (ipCliente, portaCliente) = sock.recvfrom(1024)
+            pacoteCliente, (ipCliente, portaCliente) = sock.recvfrom(1024)
 
-            pacote = json.loads(pacote.decode())
+            pacoteCliente = json.loads(pacoteCliente.decode())
 
-            if not pacote["FIN"]: # Verifica se o cliente vai enviar mais dados
+            if pacoteCliente["SYN"]:
+                sock.sendto(json.dumps(novoPacote(dados="Cliente já conectado!")).encode(), (ipCliente, portaCliente))
+            elif not pacoteCliente["FIN"]: # Verifica se o cliente vai enviar mais dados
+                if pacoteCliente["dados"]:
+                    resultado = None
 
-                comando = pacote["dados"]
+                    if auxPacote["seq"] != pacoteCliente["seq"]:
+                        comando = pacoteCliente["dados"]
 
-                log((comando, cliente), "comando")
+                        log((comando, cliente), "comando")
 
-                # Bloqueando thread para acessar a zona critica do servidor
-                lock.acquire()
-                resultado = executar(comando)
-                lock.release()
+                        # Bloqueando thread para acessar a zona critica do servidor
+                        lock.acquire()
+                        resultado = executar(comando)
+                        lock.release()
 
-                pacote = novoPacote(dados=resultado)
-                # Enviando resposta para o cliente
-                sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
+                    auxPacote = pacoteCliente
+
+                    # Enviando resposta para o cliente
+                    pacote = novoPacote(dados=resultado, ack=pacoteCliente["seq"] + 1, ACK=True)
+                    print("Ack enviado: {}".format(pacote["ack"]))
+                    sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
+                else:
+                    sock.sendto(json.dumps(novoPacote(dados="Sem dados enviados")).encode(), (ipCliente, portaCliente))
+                    break
             else:
                 sair = True
         log(cliente, "desconectado")
@@ -202,13 +217,15 @@ if __name__ == '__main__':
     contador = 0
 
     while True:
+        print ("Dentro")
+        dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
 
-        thread = threading.Thread(None, processarConexao, None,(sock, lock))
+        if not contador:
+            thread = threading.Thread(None, processarConexao, None, (sock, lock, (dados, ipCliente, portaCliente)))
 
-        thread.start() # iniciando os serviços na thread
-        thread.join() # esperando a thread terminar seu job
+            thread.start() # iniciando os serviços na thread
 
         contador += 1
-        if contador == 1000:
+        if contador == 5:
             break
     sock.close()
