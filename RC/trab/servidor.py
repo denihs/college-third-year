@@ -134,7 +134,7 @@ def executar(comando):
     elif acao == 'p':
         return buscarDados(comando)
     else:
-        return "Ação não conhecida: {}".format(acao)
+        return "Ação não conhecida: {}\n".format(acao)
 
 
 def log(dados, info):
@@ -145,8 +145,8 @@ def log(dados, info):
         print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "comando":
-        comando, cliente = dados
-        print("CLIENTE {}:{} -> Dados recebidos: {}".format(cliente[0], cliente[1], comando))
+        d, cliente = dados
+        print("CLIENTE {}:{}\nDados recebidos: {}".format(cliente[0], cliente[1], json.dumps(d, indent=2)))
         print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "erro-cliente":
@@ -182,7 +182,7 @@ def processarConexao(lock, dados):
                     if pacoteCliente["seq"] not in seqRecebidos:
                         comando = pacoteCliente["dados"]
 
-                        log((comando, cliente), "comando")
+                        log((pacoteCliente, cliente), "comando")
 
                         # Bloqueando thread para acessar a zona critica do servidor
                         lock.acquire()
@@ -193,7 +193,6 @@ def processarConexao(lock, dados):
 
                     # Enviando resposta para o cliente
                     pacote = novoPacote(dados=resultado, ack=pacoteCliente["seq"] + 1, ACK=True)
-                    print("Ack enviado: {}\n".format(pacote["ack"]))
                     sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
                 else:
                     sock.sendto(json.dumps(novoPacote(dados="Sem dados enviados")).encode(), (ipCliente, portaCliente))
@@ -214,19 +213,10 @@ if __name__ == '__main__':
 
     lock = threading.Lock()
 
-    contador = 0
-    thread = None
-
     while True:
-        print ("Dentro")
         NUMERO_CLIENTES += 1
         dados, (ipCliente, portaCliente) = sock.recvfrom(1024)
 
         thread = threading.Thread(None, processarConexao, None, (lock, (dados, ipCliente, portaCliente)))
 
         thread.start() # iniciando os serviços na thread
-
-        contador += 1
-        if contador == 5:
-            break
-    sock.close()

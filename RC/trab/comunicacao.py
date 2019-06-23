@@ -18,14 +18,17 @@ class ReceberDados:
 
     def setInterval(self, tempo=0.5):
         self.contador += 1
-        if self.contador == 5:
+        if not self.contador % 10 and self.tipo == CLIENTE:
+            print ("Tentando conexão com o servidor ({}/5)".format(int(self.contador/10)))
+        if self.contador == 50:
             if self.tipo == CLIENTE:
-                print("Nenhuma resposta do servidor, tenha certeza que o mesmo está operando. Este cliente será encerrado")
+                print("\nNenhuma resposta do servidor, tenha certeza que o mesmo está operando. Este cliente será encerrado\n")
                 os._exit(1)
             # Para não derrubar o servidor quando um cliente não responde
             # apenas é enviado uma enviado um pacote vazio do servidor para ele mesmo
             # desta forma ele saberá como tratar esses dados mais adiante
             self.sock.sendto(json.dumps(novoPacote()).encode(), self.sock.getsockname())
+            self.resetar()
         else:
             self.timer = Timer(tempo, self.setInterval, [tempo])
             self.timer.start()
@@ -109,6 +112,5 @@ def transmitir(sock, pacote, IP, PORTA, fazerTransmicao=True, contagem=1):
                 fazerTransmicao= True if contagem != N_MAX_RETRANSMISSOES else False,
                 contagem = contagem + 1
             )
-        print("Numero de sequência enviado: {}".format(pacote["seq"]))
         return pacoteRec
     return False

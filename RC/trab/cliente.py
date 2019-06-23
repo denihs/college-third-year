@@ -10,7 +10,6 @@ if len(sys.argv) != 3:
 
 dadosGravar = {
     "acao": "D",
-    "indicador": 0,
     "valor": 4999,
     "tipoCombustivel": 1,
     "coordenadas": "(-22.21532688695198;-54.75933148596293)"
@@ -18,8 +17,7 @@ dadosGravar = {
 
 dadosPesquisa = {
     "acao": "P",
-    "indicador": 0,
-    "raio": 5,
+    "raio": 1,
     "tipoCombustivel": 2,
     "coordenadas": "(-22.21532688695198;-54.75933148596293)"
 }
@@ -36,10 +34,15 @@ def enviarDados(sock, IP, PORTA):
         resp = transmitir(sock, pacote, IP, PORTA)
 
         if resp:
-            auxPacote = pacote
             dados = resp["dados"]
+            del resp["dados"]
+            print("\nPacote recebido: {}".format(json.dumps(resp, indent=2)))
+            print("\nDados do posto encontrado")
+            print("------------------------------")
             print(dados)
             print("\n")
+
+            auxPacote = pacote
         else:
             print("Falha ao enviar os dados!")
             print("\n")
