@@ -53,8 +53,7 @@ if __name__ == '__main__':
 
     if sock:
         porta = resp
-        print("Conexão estabilizada")
-        print("\n")
+        print("Conexão estabilizada\n")
         enviarDados(sock, UDP_IP, porta)
 
         # Finalizando a conexão

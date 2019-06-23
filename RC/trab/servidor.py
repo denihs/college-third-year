@@ -166,7 +166,8 @@ def processarConexao(lock, dados):
         log(cliente, "cliente")
 
         sair = False
-        auxPacote = novoPacote()
+        seqRecebidos = []
+        resultado = None
 
         while not sair:
             # Recebendo o comando do cliente
@@ -178,9 +179,7 @@ def processarConexao(lock, dados):
                 sock.sendto(json.dumps(novoPacote(dados="Cliente já conectado!")).encode(), (ipCliente, portaCliente))
             elif not pacoteCliente["FIN"]: # Verifica se o cliente vai enviar mais dados
                 if pacoteCliente["dados"]:
-                    resultado = None
-
-                    if auxPacote["seq"] != pacoteCliente["seq"]:
+                    if pacoteCliente["seq"] not in seqRecebidos:
                         comando = pacoteCliente["dados"]
 
                         log((comando, cliente), "comando")
@@ -190,7 +189,7 @@ def processarConexao(lock, dados):
                         resultado = executar(comando)
                         lock.release()
 
-                    auxPacote = pacoteCliente
+                        seqRecebidos.append(pacoteCliente["seq"])
 
                     # Enviando resposta para o cliente
                     pacote = novoPacote(dados=resultado, ack=pacoteCliente["seq"] + 1, ACK=True)
@@ -230,5 +229,4 @@ if __name__ == '__main__':
         contador += 1
         if contador == 5:
             break
-    thread.join()
     sock.close()
