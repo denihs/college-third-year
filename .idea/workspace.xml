@@ -14,11 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="Encerrando corretamente conexão entre cliente e servidor">
+    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/cliente.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/comunicacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/comunicacao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/servidor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/dados.json" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/dados.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -33,11 +32,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="servidor.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="servidor.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="403">
-                  <caret line="207" column="26" lean-forward="true" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
+                <state relative-caret-position="2925">
+                  <caret line="195" column="87" lean-forward="true" selection-start-line="195" selection-start-column="87" selection-end-line="195" selection-end-column="87" />
                   <folding>
                     <element signature="e#17#30#0" expanded="true" />
                   </folding>
@@ -45,11 +44,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="cliente.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="cliente.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="387">
-                  <caret line="33" column="47" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="47" />
+                <state relative-caret-position="135">
+                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
                   <folding>
                     <element signature="e#17#27#0" expanded="true" />
                   </folding>
@@ -64,8 +63,8 @@
           <file leaf-file-name="comunicacao.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="81" column="80" lean-forward="true" selection-start-line="81" selection-start-column="80" selection-end-line="81" selection-end-column="80" />
+                <state relative-caret-position="568">
+                  <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
                   <folding>
                     <element signature="e#16#29#0" expanded="true" />
                   </folding>
@@ -87,7 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ponto</find>
       <find>getdr</find>
       <find>getDr</find>
       <find>grid</find>
@@ -117,6 +115,7 @@
       <find>.recvfrom</find>
       <find>recvfrom(</find>
       <find>recv</find>
+      <find>indicador</find>
     </findStrings>
     <replaceStrings>
       <replace>color</replace>
@@ -142,10 +141,10 @@
         <option value="$PROJECT_DIR$/SO/multMatriz/main.c" />
         <option value="$PROJECT_DIR$/SO/multMatrizSocket/main.c" />
         <option value="$PROJECT_DIR$/RC/class/cliente.c" />
-        <option value="$PROJECT_DIR$/RC/trab/cliente.py" />
         <option value="$PROJECT_DIR$/RC/trab/setInverval.py" />
-        <option value="$PROJECT_DIR$/RC/trab/servidor.py" />
         <option value="$PROJECT_DIR$/RC/trab/comunicacao.py" />
+        <option value="$PROJECT_DIR$/RC/trab/servidor.py" />
+        <option value="$PROJECT_DIR$/RC/trab/cliente.py" />
       </list>
     </option>
   </component>
@@ -169,7 +168,10 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -338,7 +340,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561156768686</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Imprementado a retransmissão de dados">
+      <created>1561316182544</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1561316182544</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Melhorando logs">
+      <created>1561318950410</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1561318950410</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -354,10 +370,11 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16915688" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" weight="0.2897787" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16915688" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -372,7 +389,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -420,7 +436,9 @@
     <MESSAGE value="Trabalho RC" />
     <MESSAGE value="Conectando varios clientes" />
     <MESSAGE value="Encerrando corretamente conexão entre cliente e servidor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Encerrando corretamente conexão entre cliente e servidor" />
+    <MESSAGE value="Imprementado a retransmissão de dados" />
+    <MESSAGE value="Melhorando logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Melhorando logs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/RC/class/servidorMultThread.c">
@@ -701,32 +719,32 @@
     <entry file="file://$PROJECT_DIR$/RC/trab/setInverval.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
+    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="568">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
           <folding>
-            <element signature="e#17#27#0" expanded="true" />
+            <element signature="e#16#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="207" column="26" lean-forward="true" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
+        <state relative-caret-position="2925">
+          <caret line="195" column="87" lean-forward="true" selection-start-line="195" selection-start-column="87" selection-end-line="195" selection-end-column="87" />
           <folding>
             <element signature="e#17#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="81" column="80" lean-forward="true" selection-start-line="81" selection-start-column="80" selection-end-line="81" selection-end-column="80" />
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#16#29#0" expanded="true" />
+            <element signature="e#17#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
