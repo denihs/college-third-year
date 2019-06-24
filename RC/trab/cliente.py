@@ -12,16 +12,46 @@ def tratarEntrada(d):
     if d.lower() == 'sair':
         return d
 
+    # Validando o numero de parâmetros
     dados = d.replace(' ', '').split(',')
     if len(dados) != 4:
         print("Numero inválido de parâmetros\n")
         return None
 
-    coordenadas = dados[3].split(';')
-    if len(coordenadas) != 2 and ('(' not in coordenadas or ')' not in coordenadas):
-        print("Coordenadas inválidas\n")
+    # Validando a ação à ser executada
+    if dados[0].lower() not in ["d", "p"]:
+        print("Tipo de ação inválida. Os valores permitidos são: D ou P\n")
         return None
 
+    # Validando o raio/preço
+    x = None
+    try:
+        x = int(dados[1])
+        if x <= 0:
+            raise Exception()
+    except:
+        print("Você deve fornecer um inteiro positivo para o {}\n".format("raio" if dados[0].lower() == 'p' else "preço"))
+        return None
+
+    # Validando o tipo de combustível
+    if dados[2].lower() not in ["0", "1", "2"]:
+        print("Tipo de combustível inválido. Os valores permitidos são:\n0 - diesel\n1 - álcool\n2 - gasolina\n")
+        return None
+
+    # Validando as coordenadas
+    coordenadas = dados[3].split(";")
+    if len(coordenadas) != 2 or dados[3][0] != '(' or dados[3][-1] != ')':
+        print("Coordenadas inválidas\n")
+        return None
+    coordenadas = dados[3][1:-1].split(";")
+    try:
+        float(coordenadas[0])
+        float(coordenadas[1])
+    except:
+        print("As coordenas devem ser numéricas\n")
+        return None
+
+    # Preparando dados como um objeto para serem retornados
     dadosEnvio = {
         "acao": dados[0],
         "tipoCombustivel": dados[2],

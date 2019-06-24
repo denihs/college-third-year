@@ -2,7 +2,6 @@
 import socket
 import os
 import json
-import time
 from threading import Timer
 
 SERVIDOR = "SERVIDOR"

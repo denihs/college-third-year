@@ -141,12 +141,12 @@ def log(dados, info):
 
     if info == "cliente":
         ipCliente, portaCliente = dados
-        print("Cliente conectado: {}:{}".format(ipCliente, portaCliente))
+        print("Cliente conectado: {}:{} - THREAD: {}".format(ipCliente, portaCliente, threading.get_ident()))
         print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "comando":
         d, cliente = dados
-        print("CLIENTE {}:{}\nDados recebidos: {}".format(cliente[0], cliente[1], json.dumps(d, indent=2)))
+        print("CLIENTE {}:{} - THREAD {}\nDados recebidos: {}".format(cliente[0], cliente[1], threading.get_ident(),json.dumps(d, indent=2)))
         print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "erro-cliente":
