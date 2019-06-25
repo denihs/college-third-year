@@ -12,9 +12,13 @@ def tratarEntrada(d):
     if d.lower() == 'sair':
         return d
 
+    if d.lower() == '777':
+        print("Bro, faz sol")
+        return 'sair'        
+
     # Validando o numero de parâmetros
-    dados = d.replace(' ', '').split(',')
-    if len(dados) != 4:
+    dados = d.split(' ')
+    if len(dados) != 5:
         print("Numero inválido de parâmetros\n")
         return None
 
@@ -23,30 +27,25 @@ def tratarEntrada(d):
         print("Tipo de ação inválida. Os valores permitidos são: D ou P\n")
         return None
 
+    # Validando o tipo de combustível
+    if dados[1].lower() not in ["0", "1", "2"]:
+        print("Tipo de combustível inválido. Os valores permitidos são:\n0 - diesel\n1 - álcool\n2 - gasolina\n")
+        return None
+        
     # Validando o raio/preço
     x = None
     try:
-        x = int(dados[1])
+        x = int(dados[2])
         if x <= 0:
             raise Exception()
     except:
         print("Você deve fornecer um inteiro positivo para o {}\n".format("raio" if dados[0].lower() == 'p' else "preço"))
         return None
 
-    # Validando o tipo de combustível
-    if dados[2].lower() not in ["0", "1", "2"]:
-        print("Tipo de combustível inválido. Os valores permitidos são:\n0 - diesel\n1 - álcool\n2 - gasolina\n")
-        return None
-
     # Validando as coordenadas
-    coordenadas = dados[3].split(";")
-    if len(coordenadas) != 2 or dados[3][0] != '(' or dados[3][-1] != ')':
-        print("Coordenadas inválidas\n")
-        return None
-    coordenadas = dados[3][1:-1].split(";")
     try:
-        float(coordenadas[0])
-        float(coordenadas[1])
+        float(dados[3])
+        float(dados[4])
     except:
         print("As coordenas devem ser numéricas\n")
         return None
@@ -54,14 +53,14 @@ def tratarEntrada(d):
     # Preparando dados como um objeto para serem retornados
     dadosEnvio = {
         "acao": dados[0],
-        "tipoCombustivel": dados[2],
-        "coordenadas": dados[3]
+        "tipoCombustivel": dados[1],
+        "coordenadas": '({};{})'.format(dados[3], dados[4])
     }
 
     if dadosEnvio["acao"].lower() == "d":
-        dadosEnvio["valor"] = dados[1]
+        dadosEnvio["valor"] = int(dados[2])
     else:
-        dadosEnvio["raio"] = dados[1]
+        dadosEnvio["raio"] = int(dados[2])
 
     return dadosEnvio
 
