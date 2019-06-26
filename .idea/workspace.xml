@@ -15,9 +15,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/RC/trab/checksum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/cliente.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/cliente.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/dados.json" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/dados.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/comunicacao.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/comunicacao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/servidor.py" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/servidor.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -35,8 +37,8 @@
           <file leaf-file-name="servidor.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2925">
-                  <caret line="195" column="87" lean-forward="true" selection-start-line="195" selection-start-column="87" selection-end-line="195" selection-end-column="87" />
+                <state relative-caret-position="494">
+                  <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
                   <folding>
                     <element signature="e#17#30#0" expanded="true" />
                   </folding>
@@ -47,11 +49,20 @@
           <file leaf-file-name="cliente.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+                <state relative-caret-position="555">
+                  <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
                   <folding>
                     <element signature="e#17#27#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="checksum.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/RC/trab/checksum.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -63,8 +74,8 @@
           <file leaf-file-name="comunicacao.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="568">
-                  <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+                <state relative-caret-position="463">
+                  <caret line="120" column="90" lean-forward="true" selection-start-line="120" selection-start-column="90" selection-end-line="120" selection-end-column="90" />
                   <folding>
                     <element signature="e#16#29#0" expanded="true" />
                   </folding>
@@ -142,9 +153,10 @@
         <option value="$PROJECT_DIR$/SO/multMatrizSocket/main.c" />
         <option value="$PROJECT_DIR$/RC/class/cliente.c" />
         <option value="$PROJECT_DIR$/RC/trab/setInverval.py" />
-        <option value="$PROJECT_DIR$/RC/trab/comunicacao.py" />
+        <option value="$PROJECT_DIR$/RC/trab/checksum.py" />
         <option value="$PROJECT_DIR$/RC/trab/servidor.py" />
         <option value="$PROJECT_DIR$/RC/trab/cliente.py" />
+        <option value="$PROJECT_DIR$/RC/trab/comunicacao.py" />
       </list>
     </option>
   </component>
@@ -188,6 +200,122 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CG/trab" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RC/trab/__pycache__/comunicacao.cpython-35.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RC/trab/cliente.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RC/trab/comunicacao.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RC/trab/dados.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/RC/trab/servidor.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SO/prodCons</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SO/prodCons.c</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -354,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561318950410</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Permitindo o cliente entrar com dados">
+      <created>1561324270319</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1561324270319</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -371,10 +506,9 @@
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" weight="0.2897787" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16915688" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16915688" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -389,33 +523,34 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Mongo Explorer" order="5" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.16755603" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
       <window_info anchor="right" id="Key Promoter X" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,16 +573,10 @@
     <MESSAGE value="Encerrando corretamente conexão entre cliente e servidor" />
     <MESSAGE value="Imprementado a retransmissão de dados" />
     <MESSAGE value="Melhorando logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Melhorando logs" />
+    <MESSAGE value="Permitindo o cliente entrar com dados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Permitindo o cliente entrar com dados" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RC/class/servidorMultThread.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -719,20 +848,17 @@
     <entry file="file://$PROJECT_DIR$/RC/trab/setInverval.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
+    <entry file="file://$PROJECT_DIR$/RC/trab/checksum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
-          <folding>
-            <element signature="e#16#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2925">
-          <caret line="195" column="87" lean-forward="true" selection-start-line="195" selection-start-column="87" selection-end-line="195" selection-end-column="87" />
+        <state relative-caret-position="494">
+          <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
           <folding>
             <element signature="e#17#30#0" expanded="true" />
           </folding>
@@ -741,10 +867,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="555">
+          <caret line="85" column="17" lean-forward="true" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
           <folding>
             <element signature="e#17#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="120" column="90" lean-forward="true" selection-start-line="120" selection-start-column="90" selection-end-line="120" selection-end-column="90" />
+          <folding>
+            <element signature="e#16#29#0" expanded="true" />
           </folding>
         </state>
       </provider>

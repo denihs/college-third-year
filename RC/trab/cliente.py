@@ -93,8 +93,7 @@ def enviarDados(sock, IP, PORTA):
 
                 auxPacote = pacote
             else:
-                print("Falha ao enviar os dados!")
-                print("\n")
+                print("Falha ao enviar os dados!\n")
 
 
 if __name__ == '__main__':

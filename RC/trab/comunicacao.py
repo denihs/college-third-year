@@ -8,6 +8,45 @@ SERVIDOR = "SERVIDOR"
 CLIENTE = "CLIENTE"
 N_MAX_RETRANSMISSOES = 6
 
+
+def novoPacote(dados=None, SYN=False, ACK=False, FIN=False, ack=0, seq=0, proxSeq=0, checksum=None):
+    return {
+        "dados": dados,
+        "SYN": SYN,
+        "ACK": ACK,
+        "FIN": FIN,
+        "ack": ack,
+        "seq": seq,
+        "proxSeq": proxSeq,
+        "checksum": checksum
+    }
+
+def checksum(dados):
+    checksumDados = None
+    try: # Tentando recuperar um checksum existente
+        checksumDados = int(dados["checksum"])
+    except:
+        pass
+
+    try: # Tentando excluir um checksum existente
+        del dados["checksum"]
+    except:
+        pass
+
+    string = json.dumps(dados)
+
+    sum = 0
+
+    for caracter in string:
+        byte = ord(caracter) # caracter em ascii
+        sum = (sum + byte) & 0xFF # me retorna sempre um valor entre 0 e 255, não importa o sum. Tenho a garantia que não terei um valor cuja representação em binário tenha mais de 8 bits
+
+    complementoUm = sum ^ 0xFF
+    complementoDois = complementoUm + 1
+    sum = complementoDois & 0xFF # novamente garantindo que o checksum esteja entre 0 e 255
+
+    return sum, sum == checksumDados
+
 class ReceberDados:
     def __init__(self, sock, tipo=CLIENTE):
         self.sock = sock
@@ -41,19 +80,6 @@ class ReceberDados:
         dados = self.sock.recvfrom(1024)
         self.resetar()
         return dados
-
-
-
-def novoPacote(dados=None, SYN=False, ACK=False, FIN=False, ack=0, seq=0, proxSeq=0):
-    return {
-        "dados": dados,
-        "SYN": SYN,
-        "ACK": ACK,
-        "FIN": FIN,
-        "ack": ack,
-        "seq": seq,
-        "proxSeq": proxSeq
-    }
 
 def conectar(IP, PORT):
     pacote = novoPacote(SYN=True, proxSeq=1)
@@ -93,8 +119,9 @@ def aceitar(dadosCliente, numeroCliente, PORTA):
 
 
 def transmitir(sock, pacote, IP, PORTA, fazerTransmicao=True, contagem=1):
-
     if fazerTransmicao:
+        sum, _ = checksum(pacote)
+        pacote["checksum"] = sum
         sock.sendto(json.dumps(pacote).encode(), (IP, PORTA))
 
         pacoteRec, server = ReceberDados(sock).escutar()

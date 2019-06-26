@@ -5,7 +5,7 @@ import threading
 import sys
 import json
 from math import radians, cos, sin, asin, sqrt
-from comunicacao import aceitar, novoPacote
+from comunicacao import aceitar, novoPacote, checksum
 
 if len(sys.argv) != 2:
     print("Numero de parametros inválidos!")
@@ -137,7 +137,7 @@ def executar(comando):
         return "Ação não conhecida: {}\n".format(acao)
 
 
-def log(dados, info):
+def log(dados, info, retransmitido=False):
 
     if info == "cliente":
         ipCliente, portaCliente = dados
@@ -146,7 +146,13 @@ def log(dados, info):
 
     if info == "comando":
         d, cliente = dados
-        print("CLIENTE {}:{} - THREAD {}\nDados recebidos: {}".format(cliente[0], cliente[1], threading.get_ident(),json.dumps(d, indent=2)))
+        print("CLIENTE {}:{} - THREAD {} {}\nDados recebidos: {}".format(
+            cliente[0],
+            cliente[1],
+            threading.get_ident(),
+            " (Retransmitido)" if retransmitido else "",
+            json.dumps(d, indent=2))
+        )
         print('-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_\n')
 
     if info == "erro-cliente":
@@ -178,11 +184,14 @@ def processarConexao(lock, dados):
             if pacoteCliente["SYN"]:
                 sock.sendto(json.dumps(novoPacote(dados="Cliente já conectado!")).encode(), (ipCliente, portaCliente))
             elif not pacoteCliente["FIN"]: # Verifica se o cliente vai enviar mais dados
-                if pacoteCliente["dados"]:
-                    if pacoteCliente["seq"] not in seqRecebidos:
-                        comando = pacoteCliente["dados"]
 
-                        log((pacoteCliente, cliente), "comando")
+                foiSeqClienteRecebido =  pacoteCliente["seq"] in seqRecebidos
+
+                log((pacoteCliente, cliente), "comando", retransmitido=foiSeqClienteRecebido)
+
+                if pacoteCliente["dados"]:
+                    if not foiSeqClienteRecebido:
+                        comando = pacoteCliente["dados"]
 
                         # Bloqueando thread para acessar a zona critica do servidor
                         lock.acquire()
@@ -192,7 +201,8 @@ def processarConexao(lock, dados):
                         seqRecebidos.append(pacoteCliente["seq"])
 
                     # Enviando resposta para o cliente
-                    pacote = novoPacote(dados=resultado, ack=pacoteCliente["seq"] + 1, ACK=True)
+                    sum, sumIguais = checksum(pacoteCliente)
+                    pacote = novoPacote(dados=resultado, ack=pacoteCliente["seq"] + 1, ACK=sumIguais, checksum=sum)
                     sock.sendto(json.dumps(pacote).encode(), (ipCliente, portaCliente))
                 else:
                     sock.sendto(json.dumps(novoPacote(dados="Sem dados enviados")).encode(), (ipCliente, portaCliente))
