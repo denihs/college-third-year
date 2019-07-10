@@ -2,4 +2,4 @@ all:
 	python3 setup.py build_ext --inplace
 
 clean:
-	rm -rf *.so codigo/*.c
+	rm -rf *.so codigo/*.c build
