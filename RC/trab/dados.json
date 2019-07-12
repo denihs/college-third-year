@@ -23,5 +23,10 @@
     "tipoCombustivel": "1",
     "valor": 4999,
     "coordenadas": "(1;1)"
+  },
+  {
+    "tipoCombustivel": "1",
+    "valor": 1,
+    "coordenadas": "(1;1)"
   }
 ]
