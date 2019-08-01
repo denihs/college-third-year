@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/TC/sudoku.c" line="61" />
-  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
-    <generated>
-      <config projectName="college-third-year" targetName="college-third-year" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -16,19 +11,140 @@
   <component name="ChangeListManager">
     <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/Captura de tela de 2019-06-13 12-50-28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/Captura de tela de 2019-06-13 12-50-55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/cliente-servidor/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/build/temp.linux-x86_64-3.6/codigo/cliente.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/build/temp.linux-x86_64-3.6/codigo/comunicacao.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/build/temp.linux-x86_64-3.6/codigo/servidor.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/dadosBase.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/book/square" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/book/square.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/Chapter4/box" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/Chapter4/box.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/canvas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/canvas.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/circle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/circle.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/circularAnnuleses" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/circularAnnuluses.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/circuloInterativo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/circuloInterativo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/helix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/helix.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/hemisphere" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/hemisphere.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/lineStipple" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/lineStipple.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/menus" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/menus.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/mouseMotion" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/mouseMotion.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/moveSphere" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/moveSphere.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/square" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/class/square.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/1-L21.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/L22-4F (1).cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/L22-4F.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/L22-4e.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/exe4_a.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/l21-d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/l21-d.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/l22-2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/l22-2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/execCobrados/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exerc/sen" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exerc/sen.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/trab/canvas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/trab/canvas.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/trab/geometricTransformation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/trab/geometricTransformation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/.idea/RC.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/bind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/bind.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/bindLevelTwo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/bindLevelTwo.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/cliente" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/cliente-generico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/cliente-generico.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/cliente.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/criandoThread" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/criandoThread.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/criandoThreadArg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/criandoThreadArg.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/ip_host" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/ip_host.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/scanPorta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/scanPorta.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidor-fork" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidor-fork.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidor-multplex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidor-multplex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidorMultThread" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/servidorMultThread.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/socket" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/socket.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/socket_simples" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/class/socket_simples.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/cliente.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/comunicacao.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/dados.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/dadosBase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/haversine.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RC/trab/servidor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/toSend/codigo/cliente.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/toSend/codigo/comunicacao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/toSend/codigo/dados.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/toSend/codigo/servidor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/toSend/documenta__o_trabalho_rc_cliente_servidor_udp.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RC/trab/toSend/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/abc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/abc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/exerc3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/exerc3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/fork" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/fork.1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/fork.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/matrizA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/matrizB.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/processo1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/processo2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/processo3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/processo4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatriz/resultado.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/matrizA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/multMatrizSocket/matrizB.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/prodCons" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SO/prodCons.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TC/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TC/sudoku.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/teste.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -40,7 +156,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,6 +206,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -117,6 +238,7 @@
         <option value="$PROJECT_DIR$/RC/trab/cliente.py" />
         <option value="$PROJECT_DIR$/RC/trab/cliente.pyx" />
         <option value="$PROJECT_DIR$/RC/trab/servidor.pyx" />
+        <option value="$PROJECT_DIR$/RC/trab/cliente-servidor/Makefile" />
       </list>
     </option>
   </component>
@@ -148,23 +270,6 @@
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="execCobrados" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="trab" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -176,13 +281,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CMake" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Work/bemarke" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RC" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/RC/trab/cliente-servidor" />
       <recent name="$PROJECT_DIR$/SO" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CG/trab" />
@@ -202,7 +308,6 @@
   </component>
   <component name="RunManager" selected="Python.start">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="college-third-year" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="college-third-year" TARGET_NAME="college-third-year" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="college-third-year" RUN_TARGET_NAME="college-third-year" />
     <configuration name="start" type="PythonConfigurationType" factoryName="Python">
       <module name="college-third-year" />
       <option name="INTERPRETER_OPTIONS" value="python3" />
@@ -223,6 +328,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
+      <item itemvalue="Application.Build All" />
       <item itemvalue="Python.start" />
     </list>
   </component>
@@ -256,6 +362,8 @@
       <workItem from="1559605582849" duration="32000" />
       <workItem from="1562198843502" duration="986000" />
       <workItem from="1562283600778" duration="18498000" />
+      <workItem from="1563650480136" duration="599000" />
+      <workItem from="1564678780488" duration="458000" />
     </task>
     <task id="LOCAL-00001" summary="Finalização do trabalho de CG">
       <created>1555610387473</created>
@@ -376,65 +484,79 @@
       <option name="project" value="LOCAL" />
       <updated>1562302060428</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update">
+      <created>1562790112509</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1562790112509</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update makefile">
+      <created>1562792078684</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1562792078684</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122089000" />
+    <option name="totallyTimeSpent" value="123146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17395888" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.5258166" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17075774" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" weight="0.5279241" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Mongo Explorer" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32912722" />
-      <window_info anchor="right" id="Mongo Explorer" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.16755603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
-      <window_info anchor="right" id="Mongo Explorer" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Key Promoter X" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Key Promoter X" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="bottom" id="Python Console" order="13" />
     </layout-to-restore>
@@ -462,17 +584,11 @@
     <MESSAGE value="Permitindo o cliente entrar com dados" />
     <MESSAGE value="Implementando o checksum" />
     <MESSAGE value="cg exerc" />
-    <option name="LAST_COMMIT_MESSAGE" value="cg exerc" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Update makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update makefile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TC/sudoku.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/experiment/square.cpp" />
     <entry file="file://$PROJECT_DIR$/CG/exerc/sen.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -692,79 +808,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/dadosBase.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.c">
+    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.py" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/dadosBase.json" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.c" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/dados.json" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/setup.py" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.pyx" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.pyx" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.pyx" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente-servidor/Makefile" />
+    <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105237" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/dados.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.pyx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#18#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.pyx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.pyx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="216" column="40" selection-start-line="216" selection-start-column="40" selection-end-line="216" selection-end-column="40" />
-          <folding>
-            <element signature="e#17#30#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-137" />
       </provider>
     </entry>
   </component>
