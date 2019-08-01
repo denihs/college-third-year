@@ -15,20 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/Captura de tela de 2019-06-13 12-50-28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/Captura de tela de 2019-06-13 12-50-55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/RC/trab/cliente-servidor/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/build/temp.linux-x86_64-3.6/codigo/cliente.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/build/temp.linux-x86_64-3.6/codigo/comunicacao.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/build/temp.linux-x86_64-3.6/codigo/servidor.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente-servidor/dadosBase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/cliente.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/comunicacao.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/dados.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/dadosBase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/haversine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RC/trab/servidor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -40,7 +30,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="spaceTravel.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="237" column="54" selection-start-line="237" selection-start-column="54" selection-end-line="237" selection-end-column="54" />
+              <folding>
+                <element signature="e#914#938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,17 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>primitive =</find>
-      <find>recv(</find>
-      <find>ptrh</find>
-      <find>ptrp</find>
-      <find>buf</find>
-      <find>falha na conexão</find>
-      <find>socklen_t *)</find>
-      <find>accept(</find>
-      <find>SOCK_STREAM</find>
-      <find>socket(</find>
-      <find>thread_proc</find>
       <find>controlThread</find>
       <find>tri</find>
       <find>meu_socket</find>
@@ -82,6 +74,17 @@
       <find>UDP_PORT</find>
       <find>NUMERO_CLIENTES</find>
       <find>aceitar</find>
+      <find>getCenterZ</find>
+      <find>glutTimerFunc</find>
+      <find>draw()</find>
+      <find>Asteroid()</find>
+      <find>setup</find>
+      <find>z</find>
+      <find>and()%256);</find>
+      <find>columnGolden</find>
+      <find>angle</find>
+      <find>spacecraft</find>
+      <find>isCollision</find>
     </findStrings>
     <replaceStrings>
       <replace>color</replace>
@@ -90,6 +93,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="AC" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -117,6 +125,8 @@
         <option value="$PROJECT_DIR$/RC/trab/cliente.py" />
         <option value="$PROJECT_DIR$/RC/trab/cliente.pyx" />
         <option value="$PROJECT_DIR$/RC/trab/servidor.pyx" />
+        <option value="$PROJECT_DIR$/CG/provaPP2/455-B.cpp" />
+        <option value="$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp" />
       </list>
     </option>
   </component>
@@ -157,13 +167,12 @@
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
               <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="execCobrados" type="462c0819:PsiDirectoryNode" />
+              <item name="provaPP2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="trab" type="462c0819:PsiDirectoryNode" />
+              <item name="SO" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,6 +233,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.start" />
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.college-third-year" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -380,63 +391,74 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122089000" />
+    <option name="totallyTimeSpent" value="131798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17395888" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.5258166" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17075774" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" weight="0.5279241" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32912722" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17075774" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Mongo Explorer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32912722" />
-      <window_info anchor="right" id="Mongo Explorer" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.5258166" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Key Promoter X" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.16755603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
-      <window_info anchor="right" id="Mongo Explorer" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Key Promoter X" order="4" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,21 +487,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="cg exerc" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TC/sudoku.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/experiment/square.cpp" />
-    <entry file="file://$PROJECT_DIR$/CG/exerc/sen.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="44" column="77" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch..txt" />
     <entry file="file://$PROJECT_DIR$/RC/class/bind.c">
       <provider selected="true" editor-type-id="text-editor" />
@@ -640,13 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/resultado.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/resultado.txt" />
     <entry file="file://$PROJECT_DIR$/SO/multMatrizSocket/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="892">
@@ -698,11 +699,7 @@
     <entry file="file://$PROJECT_DIR$/RC/trab/dadosBase.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105237" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.c" />
     <entry file="file://$PROJECT_DIR$/RC/trab/dados.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -714,55 +711,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/setup.py" />
     <entry file="file://$PROJECT_DIR$/RC/trab/cliente.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.pyx" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.pyx" />
+    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.pyx" />
+    <entry file="file://$PROJECT_DIR$/CG/provaPP2/455-B.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-718">
+          <caret line="155" column="35" selection-end-line="365" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#926#950#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/cliente.pyx">
+    <entry file="file://$PROJECT_DIR$/CG/provaPP2/455-A.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="222">
+          <caret line="247" selection-end-line="341" />
           <folding>
-            <element signature="e#18#29#0" expanded="true" />
+            <element signature="e#926#950#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/comunicacao.pyx">
+    <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RC/trab/servidor.pyx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="216" column="40" selection-start-line="216" selection-start-column="40" selection-end-line="216" selection-end-column="40" />
+        <state relative-caret-position="184">
+          <caret line="237" column="54" selection-start-line="237" selection-start-column="54" selection-end-line="237" selection-end-column="54" />
           <folding>
-            <element signature="e#17#30#0" expanded="true" />
+            <element signature="e#914#938#0" expanded="true" />
           </folding>
         </state>
       </provider>
