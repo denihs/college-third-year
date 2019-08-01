@@ -14,12 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-    </list>
+    <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="spaceTravel.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp">
+      <file leaf-file-name="spaceTravel455.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel455.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="237" column="54" selection-start-line="237" selection-start-column="54" selection-end-line="237" selection-end-column="54" />
+            <state relative-caret-position="347">
+              <caret line="280" column="33" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
               <folding>
                 <element signature="e#914#938#0" expanded="true" />
               </folding>
@@ -387,17 +382,23 @@
       <option name="project" value="LOCAL" />
       <updated>1562302060428</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="cg exerc">
+      <created>1564690529779</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564690529780</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131798000" />
+    <option name="totallyTimeSpent" value="132507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17395888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17395888" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
@@ -745,10 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp">
+    <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel455.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="237" column="54" selection-start-line="237" selection-start-column="54" selection-end-line="237" selection-end-column="54" />
+        <state relative-caret-position="347">
+          <caret line="280" column="33" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
           <folding>
             <element signature="e#914#938#0" expanded="true" />
           </folding>
