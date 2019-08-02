@@ -51,6 +51,7 @@ int maxGoldenColor = false;
 int rowGolden = 0;
 int columnGolden = 0;
 int goldFind = 0;
+bool animate = false;
 
 // Routine to draw a bitmap character string.
 void writeBitmapString(void *font, char *string)
@@ -60,13 +61,711 @@ void writeBitmapString(void *font, char *string)
     for (c = string; *c != '\0'; c++) glutBitmapCharacter(font, *c);
 }
 
+int angles2[693] = {
+0,
+5,
+10,
+10,
+15,
+15,
+20,
+20,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+25,
+20,
+20,
+20,
+15,
+10,
+10,
+10,
+5,
+5,
+5,
+0,
+0,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+360,
+360,
+5,
+5,
+5,
+10,
+10,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+15,
+20,
+20,
+25,
+25,
+30,
+35,
+35,
+40,
+40,
+45,
+45,
+45,
+50,
+50,
+55,
+55,
+60,
+65,
+65,
+70,
+70,
+70,
+75,
+75,
+70,
+70,
+70,
+70,
+65,
+65,
+60,
+60,
+55,
+50,
+50,
+50,
+50,
+50,
+50,
+50,
+50,
+50,
+45,
+45,
+45,
+40,
+35,
+35,
+35,
+30,
+25,
+25,
+25,
+20,
+20,
+15,
+15,
+10,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+5,
+0,
+0,
+355,
+355,
+350,
+345,
+345,
+345,
+340,
+340,
+340,
+340,
+340,
+340,
+340,
+345,
+345,
+350,
+350,
+355,
+355,
+360,
+360,
+5,
+5,
+10,
+10,
+15,
+15,
+20,
+20,
+25,
+25,
+30,
+30,
+35,
+35,
+40,
+40,
+45,
+45,
+50,
+50,
+55,
+55,
+50,
+50,
+45,
+45,
+40,
+40,
+35,
+35,
+30,
+25,
+25,
+25,
+20,
+15,
+15,
+10,
+10,
+5,
+5,
+5,
+0,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+355,
+350,
+345,
+345,
+340,
+340,
+335,
+335,
+330,
+330,
+325,
+325,
+320,
+320,
+320,
+315,
+310,
+310,
+305,
+305,
+305,
+300,
+300,
+295,
+290,
+290,
+290,
+285,
+285,
+290,
+290,
+290,
+295,
+295,
+300,
+305,
+305,
+305,
+310,
+305,
+305,
+300,
+300,
+295,
+295,
+290,
+290,
+285,
+285,
+280,
+280,
+280,
+275,
+275,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+270,
+275,
+280,
+280,
+280,
+285,
+290,
+290,
+290,
+290,
+290,
+290,
+285,
+285,
+280,
+280,
+280,
+275,
+270,
+270,
+265,
+265,
+260,
+260,
+260,
+255,
+255,
+250,
+250,
+245,
+245,
+240,
+235,
+235,
+230,
+230,
+230,
+225,
+225,
+225,
+225,
+220,
+215,
+215,
+210,
+210,
+210,
+210,
+210,
+210,
+210,
+205,
+205,
+205,
+210,
+210,
+215,
+215,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+220,
+225,
+225,
+230,
+230,
+230,
+235,
+235,
+240,
+240,
+245,
+245,
+250,
+250,
+250,
+250,
+250,
+250,
+245,
+245,
+240,
+240,
+235,
+230,
+230,
+230,
+225,
+225,
+220,
+215,
+215,
+215,
+210,
+205,
+205,
+205,
+200,
+200,
+195,
+190,
+190,
+185,
+185,
+185,
+180,
+180,
+175,
+175,
+170,
+165,
+165,
+160,
+160,
+160,
+155,
+150,
+150,
+145,
+145,
+140,
+140,
+140,
+135,
+130,
+130,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+125,
+130,
+135,
+135,
+135,
+135,
+135,
+135,
+135,
+135,
+140,
+145,
+145,
+145,
+150,
+150,
+155,
+155,
+160,
+160,
+160,
+160,
+160,
+160,
+160,
+155,
+155,
+155,
+150,
+150,
+145,
+145,
+140,
+140,
+140,
+140,
+140,
+140,
+140,
+135,
+135,
+135,
+130,
+125,
+125,
+125,
+120,
+115,
+115,
+115,
+110,
+110,
+105,
+105,
+105,
+105,
+105,
+105,
+105,
+105,
+110,
+110,
+115,
+120,
+120,
+120,
+120,
+120,
+125,
+125,
+130,
+130,
+135,
+135,
+140,
+140,
+145,
+145,
+145,
+150,
+155,
+155,
+160,
+160,
+160,
+160,
+160,
+160,
+160,
+160,
+160,
+165,
+165,
+170,
+175,
+175,
+180,
+180,
+180,
+185,
+185,
+190,
+190,
+190,
+195,
+200,
+200,
+205,
+205,
+210,
+210,
+210,
+215,
+220,
+220,
+220,
+225,
+230,
+230,
+230,
+235,
+235,
+240,
+245,
+245,
+245,
+250,
+250,
+250,
+250,
+250,
+250,
+250,
+250,
+250,
+250,
+250,
+250,
+245,
+245,
+240,
+240,
+235,
+235,
+235,
+230,
+225,
+225,
+220,
+220,
+220,
+215,
+215,
+210,
+210,
+210,
+210,
+210,
+210,
+210,
+205,
+205,
+200,
+200,
+195,
+195,
+190,
+185,
+185,
+185,
+180,
+180,
+175,
+175,
+170,
+170,
+165,
+165,
+165,
+165,
+165,
+165,
+165,
+165,
+165,
+165,
+160,
+160,
+155,
+155,
+150,
+145,
+145,
+145,
+145,
+140,
+135,
+135,
+130,
+130,
+125,
+125,
+125,
+120,
+120,
+115,
+115,
+110,
+110,
+105,
+100,
+100,
+100,
+95 };
+
+
+
+
 // Asteroid class.
 class Asteroid
 {
 public:
     Asteroid();
     Asteroid(float x, float y, float z, float r, unsigned char colorR,
-             unsigned char colorG, unsigned char colorB, int golden);
+             unsigned char colorG, unsigned char colorB, int golden, int objecT);
     float getCenterX() { return centerX; }
     float getCenterY() { return centerY; }
     float getCenterZ() { return centerZ; }
@@ -77,7 +776,7 @@ public:
 private:
     float centerX, centerY, centerZ, radius;
     unsigned char color[3];
-    int golden;
+    int golden, object;
 };
 
 // Asteroid default constructor.
@@ -95,7 +794,7 @@ Asteroid::Asteroid()
 
 // Asteroid constructor.
 Asteroid::Asteroid(float x, float y, float z, float r, unsigned char colorR,
-                   unsigned char colorG, unsigned char colorB, int goldenX)
+                   unsigned char colorG, unsigned char colorB, int goldenX, int objecT)
 {
     centerX = x;
     centerY = y;
@@ -105,6 +804,7 @@ Asteroid::Asteroid(float x, float y, float z, float r, unsigned char colorR,
     color[1] = colorG;
     color[2] = colorB;
     golden = goldenX;
+    object = objecT;
 }
 
 // Function to draw asteroid.
@@ -118,8 +818,38 @@ void Asteroid::draw()
             unsigned char goldenColor[3] = {255, 255, variantGoldenColor};
             glColor3ubv(goldenColor);
         } else{glColor3ubv(color);}
+        if (golden) {
+            glutWireSphere(radius, (int)radius*6, (int)radius*6);
+        } else {
+            switch (object) {
+                case 0:
+                    glutWireCube(radius);
+                case 1:
+                    glutWireCone(radius, 10, (int)radius*6, (int)radius*6);
+                    break;
+                case 2:
+                    glutWireTorus(radius - 2, radius,  (int)radius*6, (int)radius*6);
+                    break;
+                case 3:
+                    glutWireDodecahedron();
+                    break;
+                case 4:
+                    glutWireOctahedron();
+                    break;
+                case 5:
+                    glutWireTetrahedron();
+                    break;
+                case 6:
+                    glutWireIcosahedron();
+                    break;
+                case 7:
+                    glutWireTeapot(radius);
+                    break;
+                default:
+                    glutWireSphere(radius, (int)radius*6, (int)radius*6);
+            }
+        }
 
-        glutWireSphere(radius, (int)radius*6, (int)radius*6);
         glPopMatrix();
     }
 }
@@ -141,10 +871,10 @@ void setup(void)
     glRotatef(-180.0, 0.0, 1.0, 0.0);
     glColor3f(1.0, 1.0, 1.0);
     glLineWidth(2.0);
-        glBegin(GL_LINES);
-            glVertex3f(0.0, 0.0, 0.0);
-            glVertex3f(0.0, 20.0, 0.0);
-        glEnd();
+    glBegin(GL_LINES);
+    glVertex3f(0.0, 0.0, 0.0);
+    glVertex3f(0.0, 20.0, 0.0);
+    glEnd();
     glLineWidth(1.0);
 
     glPopMatrix();
@@ -157,6 +887,8 @@ void setup(void)
                 // If rand()%100 >= FILL_PROBABILITY the default constructor asteroid remains in the slot
                 // which indicates that there is no asteroid there because the default's radius is 0.
             {
+                int n = rand()%9;
+
                 c += 1;
                 // Position the asteroids depending on if there is an even or odd number of columns
                 // so that the spacecraft faces the middle of the asteroid field.
@@ -164,13 +896,13 @@ void setup(void)
                     rowGolden = i;
                     columnGolden = j;
                     arrayAsteroids[i][j] = Asteroid( 30.0*(-COLUMNS/2 + j), 0.0, -40.0 - 30.0*i, 20.0,
-                                                     255, 255, 0, 1);
+                                                     255, 255, 0, 1, n);
                 } else if (COLUMNS%2) // Odd number of columns.
                     arrayAsteroids[i][j] = Asteroid( 30.0*(-COLUMNS/2 + j), 0.0, -40.0 - 30.0*i, 3.0,
-                                                     rand()%256, rand()%256, rand()%256, 0);
+                                                     rand()%256, rand()%256, rand()%256, 0, n);
                 else // Even number of columns.
                     arrayAsteroids[i][j] = Asteroid( 15 + 30.0*(-COLUMNS/2 + j), 0.0, -40.0 - 30.0*i, 3.0,
-                                                     rand()%256, rand()%256, rand()%256, 0);
+                                                     rand()%256, rand()%256, rand()%256, 0, n);
             }
 
     glEnable(GL_DEPTH_TEST);
@@ -218,6 +950,18 @@ void glowAsteroid( int value ) {
 
     glutTimerFunc(1, glowAsteroid, 0);
     glutPostRedisplay();
+}
+int i = 0;
+void animateScene() {
+    if (animate && i < 693) {
+
+        angle = angles2[i];
+        xVal = xVal - sin(angle * PI/180.0);
+        zVal = zVal - cos(angle * PI/180.0);
+
+        i++;
+        glutPostRedisplay();
+    }
 }
 
 // Drawing routine.
@@ -285,15 +1029,15 @@ void drawScene(void)
 
     // Fixed camera.
     gluLookAt(
-              arrayAsteroids[rowGolden][columnGolden].getCenterX(),
-              arrayAsteroids[rowGolden][columnGolden].getCenterY() + 40,
-              arrayAsteroids[rowGolden][columnGolden].getCenterZ(),
-              xVal,
-              0.0,
-              zVal,
-              0.0,
-              1.0,
-              0.0
+            arrayAsteroids[rowGolden][columnGolden].getCenterX(),
+            arrayAsteroids[rowGolden][columnGolden].getCenterY() + 40,
+            arrayAsteroids[rowGolden][columnGolden].getCenterZ(),
+            xVal,
+            0.0,
+            zVal,
+            0.0,
+            1.0,
+            0.0
     );
 
     // Draw all the asteroids in arrayAsteroids.
@@ -311,6 +1055,7 @@ void drawScene(void)
     // End left viewport.
 
     glutSwapBuffers();
+    animateScene();
 }
 
 // OpenGL window reshape routine.
@@ -327,6 +1072,8 @@ void resize(int w, int h)
     height = h;
 }
 
+
+
 // Keyboard input processing routine.
 void keyInput(unsigned char key, int x, int y)
 {
@@ -335,6 +1082,8 @@ void keyInput(unsigned char key, int x, int y)
         case 27:
             exit(0);
             break;
+        case ' ':
+            animate = !animate;
         default:
             break;
     }
@@ -372,7 +1121,7 @@ void specialKeyInput(int key, int x, int y)
         angle = tempAngle;
     }
     else isCollision = 1;
-
+    cout << angle << endl;
     glutPostRedisplay();
 }
 
@@ -387,6 +1136,7 @@ void printInteraction(void)
 // Main routine.
 int main(int argc, char **argv)
 {
+    srand((unsigned)time(0));
     printInteraction();
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
