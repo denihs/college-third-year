@@ -15,6 +15,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/IMG_6307.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/IMG_6308.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/canvas.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/methods.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/cilindro/clindro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/cilindro/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circle/circle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circle/circle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circleWithList/circleWithList" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circleWithList/circleWithList.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circuloInterativo/circuloInterativo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circuloInterativo/circuloInterativo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ex/eex.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ex/ex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ex/square.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio1/ex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio1/exercicio1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/1-L21.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/4e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/L22-2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/L22-4F.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/L22-4e.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/exe4_a.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/fonts/fonts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/fonts/fonts.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/experimentHelixPerspective" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/experimentHelixPerspective.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/helix" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/helix.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helixList/helixList" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helixList/helixList.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/hemisphere/hemis" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/hemisphere/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/lineStipple/lineStipple" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/lineStipple/lineStipple.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/menus/menus" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/menus/menus.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouse/mouse" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouse/mouse.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouseMotion/mouseMotion" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouseMotion/mouseMotion.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/movieSphere/movieSphere" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/movieSphere/movieSphere.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/multipleLists/multipleLists" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/multipleLists/multipleLists.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/paraboloide/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/paraboloide/paraboloide" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/paraboloide/test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/torus/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/torus/torus" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho1/trabalho1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho1/trabalho1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho2/trabalho2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho2/trabalho2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.55/spaceTravel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.55/spaceTravel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.56/spaceTravel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.56/spaceTravel.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.58/animateMan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.58/animateMan.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.58/animateManDataOut.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.59/4.59" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.59/4.59.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.60/4.60" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.60/4.60.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/CG/provaPP2/teste.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -45,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="952" column="1" lean-forward="true" selection-start-line="952" selection-start-column="1" selection-end-line="952" selection-end-column="1" />
+              <caret line="952" column="1" selection-start-line="952" selection-start-column="1" selection-end-line="952" selection-end-column="1" />
               <folding>
                 <element signature="e#914#938#0" expanded="true" />
               </folding>
@@ -56,10 +126,10 @@
       <file leaf-file-name="teste.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CG/provaPP2/teste.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="628" column="28" selection-start-line="628" selection-start-column="16" selection-end-line="628" selection-end-column="28" />
+            <state relative-caret-position="279">
+              <caret line="808" column="1" lean-forward="true" selection-start-line="808" selection-start-column="1" selection-end-line="808" selection-end-column="1" />
               <folding>
-                <element signature="e#1479#1503#0" expanded="true" />
+                <element signature="e#1465#1489#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,6 +267,21 @@
             <path>
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="provaPP2" type="462c0819:PsiDirectoryNode" />
+              <item name="college-Computa-oGr-fica" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="provaPP2" type="462c0819:PsiDirectoryNode" />
+              <item name="college-Computa-oGr-fica" type="462c0819:PsiDirectoryNode" />
+              <item name="Trabalhos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
               <item name="SO" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -216,6 +301,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CG/provaPP2" />
       <recent name="$PROJECT_DIR$/SO" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CG/trab" />
@@ -291,7 +377,7 @@
       <workItem from="1559605582849" duration="32000" />
       <workItem from="1562198843502" duration="986000" />
       <workItem from="1562283600778" duration="18498000" />
-      <workItem from="1564710013436" duration="1533000" />
+      <workItem from="1564710013436" duration="1828000" />
     </task>
     <task id="LOCAL-00001" summary="Finalização do trabalho de CG">
       <created>1555610387473</created>
@@ -433,24 +519,30 @@
       <option name="project" value="LOCAL" />
       <updated>1564710723149</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="cg exerc">
+      <created>1564711826727</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1564711826727</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142408000" />
+    <option name="totallyTimeSpent" value="142703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17026885" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17026885" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32912722" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32982087" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.5247629" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.5247629" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -772,7 +864,7 @@
     <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="952" column="1" lean-forward="true" selection-start-line="952" selection-start-column="1" selection-end-line="952" selection-end-column="1" />
+          <caret line="952" column="1" selection-start-line="952" selection-start-column="1" selection-end-line="952" selection-end-column="1" />
           <folding>
             <element signature="e#914#938#0" expanded="true" />
           </folding>
@@ -781,10 +873,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/provaPP2/teste.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="628" column="28" selection-start-line="628" selection-start-column="16" selection-end-line="628" selection-end-column="28" />
+        <state relative-caret-position="279">
+          <caret line="808" column="1" lean-forward="true" selection-start-line="808" selection-start-column="1" selection-end-line="808" selection-end-column="1" />
           <folding>
-            <element signature="e#1479#1503#0" expanded="true" />
+            <element signature="e#1465#1489#0" expanded="true" />
           </folding>
         </state>
       </provider>

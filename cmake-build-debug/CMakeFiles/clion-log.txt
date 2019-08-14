@@ -1,0 +1,14 @@
+/home/denyhs/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/denyhs/Documents/College/college-third-year
+-- The CXX compiler identification is GNU 7.4.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+CMake Error: CMake can not determine linker language for target: college-third-year
+CMake Error: Cannot determine link language for target "college-third-year".
+-- Generating done
+-- Build files have been written to: /home/denyhs/Documents/College/college-third-year/cmake-build-debug
+Unable to determine product file path for target college-third-year. Running and debugging will be unavailable.
