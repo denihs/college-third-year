@@ -7,6 +7,8 @@
 
 int tam=0, nProduzido;
 
+pthread_mutex_t lockProd = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t lockCons = PTHREAD_MUTEX_INITIALIZER;
 
 struct Node{
  int num;
@@ -76,12 +78,17 @@ node *pop(node *PILHA) {
 
 const produtor(node *P) {
     while(1) {
+
         int n = nProduzido++;
         if (tam == MAX_ITENS) {
             printf("Produtor dormindo!\n");
+            pthread_mutex_lock(&lockProd);
         }
-        while(tam >= MAX_ITENS);
+        
         push(P, n);
+        if (tam == 1) {
+            pthread_mutex_unlock(&lockCons);
+        }
     }
 }
 
@@ -89,9 +96,13 @@ const consumidor(node *P) {
     while(1) {
         if (!tam) {
             printf("Consumidor dormindo!\n");
+            pthread_mutex_lock(&lockCons);
         }
-        while(tam <= 0);
+
         node *ultimo = pop(P);
+        if (tam == MAX_ITENS - 1) {
+            pthread_mutex_unlock(&lockProd);
+        }
         printf("Consumido: %d\n", ultimo->num);
     }
 }
