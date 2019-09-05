@@ -1,10 +1,14 @@
 #include <GL/glut.h>
 #include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 #include <math.h>
 
 GLdouble wxN = -50, wyN = 10, wzN = 0;  /*  returned world x, y, z coords  */
 GLdouble wxF = 50, wyF = 0, wzF = 0;  /*  returned world x, y, z coords  */
+
+#define TAM 20
+int xs[TAM], ys[TAM], zs[TAM], rs[TAM];
 
 int isTouched(float x, float y, float z, float r) {
    // Vetor diretor de R (dr)
@@ -34,47 +38,34 @@ int isTouched(float x, float y, float z, float r) {
 
     float dist = modQPdr / modDr;
 
-    printf("Dist: %f\n", dist);
     return dist <= r ? 1 : 0;
 }
 
 void display(void)
 {
     glPointSize(5);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
 
-    glPushMatrix();
+    int x, y, z, r;
+    for (int i = 0; i < TAM; i++) {
 
-        if (isTouched(0, 0, -11, 10)) glColor3f(1, 1, 0);   // Yellow
-        else glColor3f(1, 1, 1); // White
+        x = xs[i];
+        y = ys[i];
+        z = zs[i];
+        r = rs[i];
 
-        glTranslatef(0, 0, -11);
-        glutWireSphere(10, 30, 30);
+        glPushMatrix();
+            if (isTouched(x, y, z, r)) glColor3f(1, 1, 0);   // Yellow
+            else glColor3f(1, 1, 1); // White
 
-    glPopMatrix();
+            glTranslatef(x, y, z);
+            glutWireSphere(r, 30, 30);
 
-    glPushMatrix();
-
-        if (isTouched(0, 0, -11, 10)) glColor3f(1, 1, 0);   // Yellow
-        else glColor3f(1, 1, 1); // White
-
-        glTranslatef(11, 11, -11);
-        glutWireSphere(5, 30, 30);
-    glPopMatrix();
+        glPopMatrix();
+    }
 
     glFlush();
-}
-
-/* Change these values for a different transformation  */
-void reshape(int w, int h)
-{
-    glViewport (0, 0, (GLsizei) w, (GLsizei) h);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-
-    // Set viewing box dimensions equal to window dimensions.
-    glOrtho(0.0, w, h, 0.0, 0.0, 1.0);
-    glMatrixMode(GL_MODELVIEW);
+    glutSwapBuffers( );
 }
 
 void mouse(int button, int state, int x, int y)
@@ -119,21 +110,52 @@ void keyboard(unsigned char key, int x, int y)
             break;
     }
 }
-
-/* 
- *  Open window, register input callback functions
- */
-int main(int argc, char** argv)
+void init( int width, int height )
 {
-    glutInit(&argc, argv);
-    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (800, 800);
-    glutInitWindowPosition (100, 100);
-    glutCreateWindow(argv[0]);
-    glutDisplayFunc(display);
-    glutReshapeFunc(reshape);
-    glutKeyboardFunc (keyboard);
-    glutMouseFunc(mouse);
-    glutMainLoop();
-    return 0;
+    glClearColor( 0.3, 0.3, 0.3, 1 );
+    glViewport( 0, 0, width, height );
+    glMatrixMode( GL_PROJECTION );
+    glLoadIdentity( );
+    gluPerspective( 45, 1.33, 0.1, 400 );
+    glMatrixMode( GL_MODELVIEW );
+    glLoadIdentity( );
+    gluLookAt( -0, 0, 100, 0, 0, 0, 0, 1, 0 );
+}
+
+float moreRandom() {
+    return -1 + rand()%3;
+}
+
+int main( int argc, char **argv )
+{
+    srand(time(NULL));
+
+
+    for(int i = 0; i < TAM; i++) {
+        xs[i] = (rand()%80) * moreRandom();
+        ys[i] = (rand()%80) * moreRandom();
+        zs[i] = (20 + rand()%80) * -1;
+        rs[i] = 5 + rand()%10;
+    }
+    for(int i = 0; i < TAM; i++) {
+            printf("X: %d, Y: %d, Z: %d, R: %d\n", xs[i], ys[i], zs[i], rs[i]);
+    }
+
+    glutInit( &argc, argv );
+    //The most important part specify the things your
+    //glut window should provide
+    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
+    glutInitWindowSize( 1280, 720 );
+    glutCreateWindow("Teste usando gluUnProject");
+
+    //enable z buffer
+    glEnable( GL_DEPTH_TEST );
+    //set the value in z-buffer as 1.0
+    glClearDepth( 1.0 );
+    init( 1280, 720 );
+    glutDisplayFunc( display );
+    glutReshapeFunc( init );
+    //glutIdleFunc( display );
+    glutMouseFunc( mouse );
+    glutMainLoop( );
 }
