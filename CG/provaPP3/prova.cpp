@@ -9,6 +9,8 @@
 #include <GL/gl.h>
 #include <iostream>
 
+static long font = (long)GLUT_BITMAP_9_BY_15; // Font selection.
+
 using namespace std;
 
 #define TRANSLATE 1
@@ -28,22 +30,89 @@ int rotateZ = 0;
 int firsClick = 0;
 double objx = 0, objy=0, objz=0;
 double angle_x = 0, angle_y = 0;
-double move_x = 0;
+double move_x = 1;
 double move_y = 0;
 double move_z = 0;
 
-void getRandomColor() {
-    float x = rand()%255;
-    float y = rand()%255;
-    float z = rand()%255;
-    printf("x: %f, y: %f, z: %f\n", x, y ,z);
-    glColor3f( rand()%255, rand()%255, rand()%255);
+int w, h;
+
+// Routine to draw a bitmap character string.
+void writeBitmapString(void *font, char *string, int x = 1000) {
+    char *c;
+    int i[10] = {100, 100, 100, 100, 100, 100, 100, 100, 100, 100};
+    int aux = x;
+
+    for (c = string; *c != '\0'; c++) glutBitmapCharacter(font, *c);
+
+    if (x < 1000) {
+        if (x < 0) {
+            glutBitmapCharacter(font, 45);
+            aux *= -1;
+        }
+
+        if (aux >= 0 && aux < 10) {
+            glutBitmapCharacter(font, aux + 48);
+            return;
+        }
+
+        int d = aux < 100 ? 10 : 100;
+
+        for (int j = 0; j < 10, d >= 1; j++) {
+            i[j] = aux / d;
+            int rest = aux % d;
+            aux = rest;
+            d /= 10;
+        }
+
+        for (int h = 0; i[h] != 100; h++) glutBitmapCharacter(font, i[h] + 48);
+
+    }
+}
+
+char * getMode() {
+    if (mode == SCALE) return "Scale";
+    if (mode == ROTATION) return "Rotate";
+    return "Translate";
+}
+
+char * getAxis() {
+    if (move_x) return "X";
+    if (move_y) return "Y";
+    return "Z";
+}
+
+char * getMovementStatus() {
+    if (firsClick) {
+        return "ON";
+    }
+    return "OFF";
+}
+
+void infos() {
+        glColor3f(1.0, 1.0, 0.0);
+        glRasterPos3f(-150, -80, 0.0);
+        writeBitmapString((void*)font, "mode: ");
+        glRasterPos3f(-143, -81, 0.0);
+        writeBitmapString((void*)font, getMode());
+
+
+        glRasterPos3f(-151, -85, 0.0);
+        writeBitmapString((void*)font, "axis: ");
+        glRasterPos3f(-143, -86, 0.0);
+        writeBitmapString((void*)font, getAxis());
+
+        glRasterPos3f(-152, -90, 0.0);
+        writeBitmapString((void*)font, "movement: ");
+        glRasterPos3f(-140, -92, 0.0);
+        writeBitmapString((void*)font, getMovementStatus());
 }
 
 /*THE FUNCTION TO DRAW THE STUFF ON THE SCREEN*/
 void display()
 {
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
+
+    infos();
 
     //glRotatef(angle_y, 1.0, 0.0, 0.0);
     glPushMatrix();
@@ -181,6 +250,7 @@ void mouse( int button, int state, int x, int y) {
             if (!firsClick) {
                 resetVariables();
             }
+            glutPostRedisplay();
         }
     }
 }
@@ -328,6 +398,9 @@ void keyInput(unsigned char key, int x, int y)
 
 void init( int width, int height )
 {
+    w = width;
+    h = height;
+
     glClearColor( 0.3, 0.3, 0.3, 1 );
     glViewport( 0, 0, width, height );
     glMatrixMode( GL_PROJECTION );
