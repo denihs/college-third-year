@@ -88,36 +88,4 @@ inserir:
 		jal salvarDados
 		add $a0, $v1, $zero
 		bne $a0, $s7, for
-		
-		add $a1, $zero, $sp
-
-imprimir:
-		lw $t0, 0($a1)
-		bne $t0, $zero, continua
-		jr $ra
-		
-		continua:
-			addi $t0, $a1, 4
-			lw $a1, 0($t0)
-			beq $a1, $zero, skip
-			jal imprimir
-			skip:
-			add $a1, $zero, $t0
-			# Monstrando elemento
-			
-			lw $t0, 0($a1)
-			add $a0, $zero, $t0
-			addi $v0, $zero, 1
-			syscall
-			
-			addi $a0, $zero, 32 # ascii para espaço
-			addi $v0, $zero, 11 # setando o comando de impressão de caracter
-			syscall
-		
-			addi $t0, $a1, 4
-			lw $a1, 0($t0)
-			beq $a1, $zero, skip2
-			jal imprimir
-			skip2:
-
 sair:

@@ -15,78 +15,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/IMG_6307.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/IMG_6308.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/canvas.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/canvas/methods.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/cilindro/clindro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/cilindro/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circle/circle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circle/circle.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circleWithList/circleWithList" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circleWithList/circleWithList.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circuloInterativo/circuloInterativo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/circuloInterativo/circuloInterativo.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ex/eex.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ex/ex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ex/square.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio1/ex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio1/exercicio1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/1-L21.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/4e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/L22-2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/L22-4F.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/L22-4e.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/exercicio_prova/exe4_a.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/fonts/fonts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/fonts/fonts.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/experimentHelixPerspective" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/experimentHelixPerspective.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/helix" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helix/helix.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helixList/helixList" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/helixList/helixList.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/hemisphere/hemis" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/hemisphere/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/lineStipple/lineStipple" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/lineStipple/lineStipple.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/menus/menus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/menus/menus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouse/mouse" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouse/mouse.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouseMotion/mouseMotion" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/mouseMotion/mouseMotion.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/movieSphere/movieSphere" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/movieSphere/movieSphere.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/multipleLists/multipleLists" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/multipleLists/multipleLists.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/paraboloide/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/paraboloide/paraboloide" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/paraboloide/test.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/torus/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/torus/torus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho1/trabalho1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho1/trabalho1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho2/trabalho2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho2/trabalho2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.55/spaceTravel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.55/spaceTravel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.56/spaceTravel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.56/spaceTravel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.58/animateMan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.58/animateMan.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.58/animateManDataOut.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.59/4.59" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.59/4.59.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.60/4.60" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Trabalhos/Trabalho3/4.60/4.60.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/provaPP2/teste.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AC/arvore.asm" beforeDir="false" afterPath="$PROJECT_DIR$/AC/arvore.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/provaPP3/prova" beforeDir="false" afterPath="$PROJECT_DIR$/CG/provaPP3/prova" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/provaPP3/prova.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/provaPP3/prova.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -99,38 +31,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spaceTravel455.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel455.cpp">
+      <file leaf-file-name="prova.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CG/provaPP3/prova.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5715">
-              <caret line="381" column="35" selection-end-line="406" />
-              <folding>
-                <element signature="e#914#938#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="455">
+              <caret line="116" column="58" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spaceTravel456.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp">
+      <file leaf-file-name="ballAndTorus.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="952" column="1" selection-start-line="952" selection-start-column="1" selection-end-line="952" selection-end-column="1" />
-              <folding>
-                <element signature="e#914#938#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="214">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teste.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CG/provaPP2/teste.cpp">
+      <file leaf-file-name="unproject.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CG/unproject.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="808" column="1" lean-forward="true" selection-start-line="808" selection-start-column="1" selection-end-line="808" selection-end-column="1" />
-              <folding>
-                <element signature="e#1465#1489#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1830">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geometricTransformation.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CG/trab/geometricTransformation.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="333" column="38" lean-forward="true" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -147,16 +79,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>glPopMatrix</find>
-      <find>latAngle</find>
-      <find>day</find>
-      <find>PORTA</find>
-      <find>UDP_IP</find>
-      <find>UDP_PORT</find>
-      <find>NUMERO_CLIENTES</find>
-      <find>aceitar</find>
-      <find>getCenterZ</find>
-      <find>glutTimerFunc</find>
       <find>draw()</find>
       <find>Asteroid()</find>
       <find>setup</find>
@@ -177,6 +99,16 @@
       <find>animate(</find>
       <find>draw</find>
       <find>animateMode</find>
+      <find>frus</find>
+      <find>specialKeyInput</find>
+      <find>reshape</find>
+      <find>move_x</find>
+      <find>move_z</find>
+      <find>angle_x</find>
+      <find>glColor</find>
+      <find>width / 2</find>
+      <find>SCALE</find>
+      <find>rotate</find>
     </findStrings>
     <replaceStrings>
       <replace>color</replace>
@@ -219,8 +151,12 @@
         <option value="$PROJECT_DIR$/RC/trab/servidor.pyx" />
         <option value="$PROJECT_DIR$/CG/provaPP2/455-B.cpp" />
         <option value="$PROJECT_DIR$/CG/provaPP2/spaceTravel.cpp" />
-        <option value="$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp" />
         <option value="$PROJECT_DIR$/CG/provaPP2/teste.cpp" />
+        <option value="$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp" />
+        <option value="$PROJECT_DIR$/CG/unproject2.c" />
+        <option value="$PROJECT_DIR$/CG/unproject2.cpp" />
+        <option value="$PROJECT_DIR$/CG/unproject.c" />
+        <option value="$PROJECT_DIR$/CG/provaPP3/prova.cpp" />
       </list>
     </option>
   </component>
@@ -245,7 +181,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,32 +197,19 @@
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
               <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="provaPP2" type="462c0819:PsiDirectoryNode" />
+              <item name="provaPP3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
               <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="provaPP2" type="462c0819:PsiDirectoryNode" />
-              <item name="college-Computa-oGr-fica" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="provaPP2" type="462c0819:PsiDirectoryNode" />
-              <item name="college-Computa-oGr-fica" type="462c0819:PsiDirectoryNode" />
-              <item name="Trabalhos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
-              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
-              <item name="SO" type="462c0819:PsiDirectoryNode" />
+              <item name="trab" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,7 +219,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Work/bemarke" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -378,6 +300,9 @@
       <workItem from="1562198843502" duration="986000" />
       <workItem from="1562283600778" duration="18498000" />
       <workItem from="1564710013436" duration="1828000" />
+      <workItem from="1567707905067" duration="11744000" />
+      <workItem from="1567886174081" duration="2970000" />
+      <workItem from="1567969505425" duration="7828000" />
     </task>
     <task id="LOCAL-00001" summary="Finalização do trabalho de CG">
       <created>1555610387473</created>
@@ -526,23 +451,39 @@
       <option name="project" value="LOCAL" />
       <updated>1564711826727</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="cg trabalho">
+      <created>1567712694364</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1567712694364</updated>
+    </task>
+    <task id="LOCAL-00023" summary="cg trabalho">
+      <created>1567719817008</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1567719817008</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142703000" />
+    <option name="totallyTimeSpent" value="165245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17026885" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17026885" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="CMake" order="8" weight="0.32912722" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32982087" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.5247629" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2687039" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -558,35 +499,34 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Mongo Explorer" order="4" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16755603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16755603" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Mongo Explorer" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,47 +552,15 @@
     <MESSAGE value="Permitindo o cliente entrar com dados" />
     <MESSAGE value="Implementando o checksum" />
     <MESSAGE value="cg exerc" />
-    <option name="LAST_COMMIT_MESSAGE" value="cg exerc" />
+    <MESSAGE value="cg trabalho" />
+    <option name="LAST_COMMIT_MESSAGE" value="cg trabalho" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1035" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/class/mouseMotion.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1905" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/class/circuloInterativo.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/class/lineStipple.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/class/menus.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="117" column="29" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CG/class/circle.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -664,13 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="431" column="30" lean-forward="true" selection-end-line="464" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/trab/geometricTransformation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="347" column="33" selection-start-line="347" selection-start-column="33" selection-end-line="347" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -848,9 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5715">
           <caret line="381" column="35" selection-end-line="406" />
-          <folding>
-            <element signature="e#914#938#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -861,23 +759,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp">
+    <entry file="file://$PROJECT_DIR$/SO/prodConsSW.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="952" column="1" selection-start-line="952" selection-start-column="1" selection-end-line="952" selection-end-column="1" />
-          <folding>
-            <element signature="e#914#938#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1414" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/provaPP2/teste.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="808" column="1" lean-forward="true" selection-start-line="808" selection-start-column="1" selection-end-line="808" selection-end-column="1" />
+        <state relative-caret-position="12120">
+          <caret line="808" column="1" selection-start-line="808" selection-start-column="1" selection-end-line="808" selection-end-column="1" />
           <folding>
             <element signature="e#1465#1489#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/provaPP2/spaceTravel456.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16785">
+          <caret line="1119" column="24" selection-start-line="1119" selection-start-column="24" selection-end-line="1119" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO/prodConsSem.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/unproject2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="42" />
+          <folding>
+            <element signature="e#2318#3112#0" />
+            <element signature="e#4242#4786#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/unproject.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/trab/geometricTransformation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="333" column="38" lean-forward="true" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/provaPP3/prova.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="116" column="58" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
         </state>
       </provider>
     </entry>

@@ -2,6 +2,8 @@
 // Created by denyhs on 05/09/19.
 //
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include <GL/glut.h>
 #include <GL/glu.h>
 #include <GL/gl.h>
@@ -9,32 +11,44 @@
 
 using namespace std;
 
-#define HEIGHT 480
-#define WIDTH 640
+#define TRANSLATE 1
+#define SCALE 2
+#define ROTATION 3
+
+int mode = 1;
+
+int scaleX = 0;
+int scaleY = 0;
+int scaleZ = 0;
+
+int rotateX = 0;
+int rotateY = 0;
+int rotateZ = 0;
+
 int firsClick = 0;
-int keyboard_event_x = 0;
-int keyboard_event_y = 0;
 double objx = 0, objy=0, objz=0;
 double angle_x = 0, angle_y = 0;
 double move_x = 0;
 double move_y = 0;
 double move_z = 0;
-int widthOrigin, heightOrigin;
+
+void getRandomColor() {
+    float x = rand()%255;
+    float y = rand()%255;
+    float z = rand()%255;
+    printf("x: %f, y: %f, z: %f\n", x, y ,z);
+    glColor3f( rand()%255, rand()%255, rand()%255);
+}
 
 /*THE FUNCTION TO DRAW THE STUFF ON THE SCREEN*/
 void display()
 {
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
-    
+
     //glRotatef(angle_y, 1.0, 0.0, 0.0);
     glPushMatrix();
-        if (keyboard_event_x == 1){
-            glRotatef(angle_x, 0.0, 1.0, 0.0);
-        }
-        else if (keyboard_event_y == 1){
-            //glRotatef(angle_x, 0.0, 1.0, 0.0);
-            glRotatef(angle_y, 1.0, 0.0, 0.0);
-        }
+        glRotatef(angle_x, 0.0, 1.0, 0.0);
+        glRotatef(angle_y, 1.0, 0.0, 0.0);
         // Desenhando o grid
         glBegin( GL_LINES );
             glColor3f(0, 0, 1);
@@ -60,67 +74,124 @@ void display()
             glEnd( );
         }
 
-        // Desenhando cubo com os eixos
+        // Desenhando cubo e linhas
         glColor3f(0.8, 0.8, 0.8);
         glPushMatrix( );
-            glColor3f( 1, 0, 0 );
-            glTranslatef( 0, 0, 0);
-            glTranslatef(move_x, move_y, move_z);
-            
-            
-            glutSolidCube( 17 );
-            
-        glPopMatrix( );
+            glTranslatef( objx, objy, objz);
+            glRotatef(rotateX, 1.0, 0.0, 0.0);
+            glRotatef(rotateY, 0.0, 1.0, 0.0);
+            glRotatef(rotateZ, 0.0, 0.0, 1.0);
+            glTranslatef(0, 0, 0);
+
+            glBegin( GL_LINES );
+                if (move_z) glColor3f(1, 1, 0);
+                else glColor3f(1, 1, 1);
+                glVertex3f( 0, 0,  0  );
+                glVertex3f( 0, 0, 40  );
+            glEnd( );
+
+            glBegin( GL_LINES );
+                if (move_x) glColor3f(1, 1, 0);
+                else glColor3f(1, 1, 1);
+                glVertex3f( 0, 0,  0  );
+                glVertex3f( 40, 0,  0  );
+            glEnd( );
+
+            glBegin( GL_LINES );
+                if (move_y) glColor3f(1, 1, 0);
+                else glColor3f(1, 1, 1);
+                glVertex3f( 0, 0,  0  );
+                glVertex3f( 0, 40,  0  );
+            glEnd( );
+            float scale = 5.0;
+            //Lado FRENTE
+            glBegin(GL_POLYGON);
+                glColor3f(1.0, 0.0, 0.0); glVertex3f(  scale + scaleX, -scale - scaleY, -scale - scaleZ );
+                glColor3f(0.0, 1.0, 0.0); glVertex3f(  scale + scaleX,  scale + scaleY, -scale - scaleZ );
+                glColor3f(0.0, 0.0, 1.0); glVertex3f( -scale - scaleX,  scale + scaleY, -scale - scaleZ );
+                glColor3f(1.0, 1.0, 0.0); glVertex3f( -scale - scaleX, -scale - scaleY, -scale - scaleZ );
+            glEnd();
+
+            // Lado TRASEIRA
+            glBegin(GL_POLYGON);
+                glColor3f(1.0, 0.0, 0.0);glVertex3f(  scale + scaleX, -scale - scaleY, scale + scaleZ );
+                glColor3f(0.0, 1.0, 0.0);glVertex3f(  scale + scaleX,  scale + scaleY, scale + scaleZ );
+                glColor3f(0.0, 0.0, 1.0);glVertex3f( -scale - scaleX,  scale + scaleY, scale + scaleZ );
+                glColor3f(1.0, 1.0, 0.0);glVertex3f( -scale - scaleX, -scale - scaleY, scale + scaleZ );
+            glEnd();
+
+            // Lado DIREITA
+            glBegin(GL_POLYGON);
+                glColor3f(1.0, 0.0, 0.0);glVertex3f( scale + scaleX, -scale - scaleY, -scale - scaleZ );
+                glColor3f(0.0, 1.0, 0.0);glVertex3f( scale + scaleX,  scale + scaleY, -scale - scaleZ );
+                glColor3f(0.0, 0.0, 1.0);glVertex3f( scale + scaleX,  scale + scaleY,  scale + scaleZ );
+                glColor3f(1.0, 1.0, 0.0);glVertex3f( scale + scaleX, -scale - scaleY,  scale + scaleZ );
+            glEnd();
+
+            // Lado ESQUERDA
+            glBegin(GL_POLYGON);
+                glColor3f(1.0, 0.0, 0.0);glVertex3f( -scale - scaleX, -scale - scaleY, scale + scaleZ );
+                glColor3f(0.0, 1.0, 0.0);glVertex3f( -scale - scaleX,  scale + scaleY,  scale + scaleZ );
+                glColor3f(0.0, 0.0, 1.0);glVertex3f( -scale - scaleX,  scale + scaleY, -scale - scaleZ );
+                glColor3f(1.0, 1.0, 0.0);glVertex3f( -scale - scaleX, -scale - scaleY, -scale - scaleZ );
+            glEnd();
+
+            // Lado TOPO
+            glBegin(GL_POLYGON);
+                glColor3f(1.0, 0.0, 0.0);glVertex3f(  scale + scaleX,  scale + scaleY,  scale + scaleZ );
+                glColor3f(0.0, 1.0, 0.0);glVertex3f(  scale + scaleX,  scale + scaleY, -scale - scaleZ );
+                glColor3f(0.0, 0.0, 1.0);glVertex3f( -scale - scaleX,  scale + scaleY, -scale - scaleZ );
+                glColor3f(1.0, 1.0, 0.0);glVertex3f( -scale - scaleX,  scale + scaleY,  scale + scaleZ );
+            glEnd();
+
+            // Lado BASE
+            glBegin(GL_POLYGON);
+                glColor3f(1.0, 0.0, 0.0);glVertex3f(  scale + scaleX, -scale - scaleY, -scale - scaleZ );
+                glColor3f(0.0, 1.0, 0.0);glVertex3f(  scale + scaleX, -scale - scaleY,  scale + scaleZ );
+                glColor3f(0.0, 0.0, 1.0);glVertex3f( -scale - scaleX, -scale - scaleY, scale + scaleZ );
+                glColor3f(1.0, 1.0, 0.0);glVertex3f( -scale - scaleX, -scale - scaleY, -scale - scaleZ );
+            glEnd();
+
+    glPopMatrix( );
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef( 0, 0, 0);
-            glTranslatef(move_x, move_y, move_z);
-        glBegin( GL_LINES );
-            glColor3f(0, 0, 1);
-            glVertex3f( 0, 0,  0  );
-            glVertex3f( 0, 0, 40  );
-        glEnd( );
-        
-        glBegin( GL_LINES );
-            glColor3f(1, 0, 0);
-            glVertex3f( 0, 0,  0  );
-            glVertex3f( 40, 0,  0  );
-        glEnd( );
-        
-        glBegin( GL_LINES );
-            glColor3f(0, 1, 0);
-            glVertex3f( 0, 0,  0  );
-            glVertex3f( 0, 40,  0  );
-        glEnd( );
+
     glPopMatrix();
 
     glFlush( );
     glutSwapBuffers( );
 }
 
+double scaleAux = 0.0;
+double rotateAux = 0.0;
+
+
+void resetVariables() {
+    scaleAux = 0.0;
+    rotateAux = 0.0;
+}
+
+
 void mouse( int button, int state, int x, int y) {
     if (button == GLUT_LEFT_BUTTON) {
         if (state == GLUT_DOWN) {       
             firsClick = 1 - firsClick;
-            float m = ((heightOrigin + 0) - heightOrigin) / ((widthOrigin + 40) - widthOrigin);
-
-            float op = y - heightOrigin - m * (x - widthOrigin);
-
-            printf("op: %f, m: %f\n", op, m);
-            printf("x: %d, y: %d\n", x, y);
-            printf("w: %d, h: %d\n", widthOrigin, heightOrigin);
+            if (!firsClick) {
+                resetVariables();
+            }
         }
     }
 }
 
 // Mouse motion callback routine.
 void mousePassiveMotion(int x, int y){ 
-   double modelview[16], projection[16];
+    double modelview[16], projection[16], auxX, auxY, auxZ;
     int viewport[4];
     float z = 1 - 0.0001;
-    //float z = 1 - 0.001;
-   if (firsClick) {
+
+   if (firsClick && (move_x || move_y || move_z)) {
         /*Read the projection, modelview and viewport matrices
         using the glGet functions.*/
         glGetDoublev( GL_PROJECTION_MATRIX, projection );
@@ -132,13 +203,47 @@ void mousePassiveMotion(int x, int y){
         //if (z == 1) z -= 0.00001;
         //Use the gluUnProject to get the world co-ordinates of
         //the point the user clicked and save in objx, objy, objz.
-        gluUnProject( x, viewport[3]-y, z, modelview, projection, viewport, &objx, &objy, &objz );
-        keyboard_event_y = 0;
-        keyboard_event_x = 0;
-        move_x = 0;
-        move_y = 0;
-        move_z = 0;
-        
+        gluUnProject( x, viewport[3]-y, z, modelview, projection, viewport, &auxX, &auxY, &auxZ );
+
+        if (mode == TRANSLATE) {
+            if (move_x) objx = auxX;
+            if (move_y) objy = auxY;
+            if (move_z) objz = -auxY;
+        }
+
+        if (mode == SCALE) {
+
+            if(move_x) {
+                auxX > scaleAux ? scaleX++ : scaleX--;
+                scaleAux = auxX;
+            }
+            if(move_y) {
+                auxY > scaleAux ? scaleY++ : scaleY--;
+                scaleAux = auxY;
+            }
+            if(move_z) {
+                auxZ > scaleAux ? scaleZ++ : scaleZ--;
+                scaleAux = auxZ;
+            }
+        }
+
+        if (mode == ROTATION) {
+            if(move_x) {
+                auxX > rotateAux ? rotateX++ : rotateX--;
+                rotateAux = auxX;
+            }
+            if(move_y) {
+                auxY > rotateAux ? rotateY++ : rotateY--;
+                rotateAux = auxY;
+            }
+            if(move_z) {
+                auxZ > rotateAux ? rotateZ++ : rotateZ--;
+                rotateAux = auxZ;
+            }
+        }
+
+
+
         glutPostRedisplay();
    }
 }
@@ -149,32 +254,24 @@ void keyboard( int key, int x, int y )
 
 
     if (key == GLUT_KEY_RIGHT){
-        keyboard_event_x = 1;
-        keyboard_event_y = 0;
         angle_x += 2.0;
         glutPostRedisplay();
         //cout << "aqui" << endl;
     }
 
     else if(key == GLUT_KEY_LEFT){
-        keyboard_event_x = 1;
-        keyboard_event_y = 0;
         angle_x -= 2.0;
         glutPostRedisplay();
         //cout << "aqui-1" << endl;
     }
 
     else if(key == GLUT_KEY_UP){
-        keyboard_event_y = 1;
-        keyboard_event_x = 0;
         angle_y += 2.0;
         glutPostRedisplay();
         //cout << "aqui-3" << endl;
     }
 
     else if (key ==  GLUT_KEY_DOWN) {
-        keyboard_event_y = 1;
-        keyboard_event_x = 0;
         angle_y -= 2.0;
         glutPostRedisplay();
         //cout << "aqui-4" << endl;
@@ -182,27 +279,44 @@ void keyboard( int key, int x, int y )
 
 }
 
+void setMove(int x, int y, int z) {
+    move_x = x;
+    move_y = y;
+    move_z = z;
+}
+
 void keyInput(unsigned char key, int x, int y)
 {
-    keyboard_event_y = keyboard_event_x = 0;
     switch (key) {
         case 'x':
-            move_x+=1;
-            break;
         case 'X':
-            move_x-=1;
+            setMove(1, 0, 0);
+            resetVariables();
             break;
         case 'y':
-            move_y+=1;
-            break;
         case 'Y':
-            move_y-=1;
+            setMove(0, 1, 0);
+            resetVariables();
             break;
         case 'z':
-            move_z+=1;
-            break;
         case 'Z':
-            move_z-=1;
+            setMove(0, 0, 1);
+            resetVariables();
+            break;
+        case 't':
+        case 'T':
+            mode = 1;
+            resetVariables();
+            break;
+        case 's':
+        case 'S':
+            mode = 2;
+            resetVariables();
+            break;
+        case 'r':
+        case 'R':
+            mode = 3;
+            resetVariables();
             break;
         case 27:
             exit(0);
@@ -214,8 +328,6 @@ void keyInput(unsigned char key, int x, int y)
 
 void init( int width, int height )
 {
-    widthOrigin = width / 2;
-    heightOrigin = height / 2;
     glClearColor( 0.3, 0.3, 0.3, 1 );
     glViewport( 0, 0, width, height );
     glMatrixMode( GL_PROJECTION );
@@ -228,6 +340,7 @@ void init( int width, int height )
 
 int main( int argc, char **argv )
 {
+    srand(time(NULL));
     glutInit( &argc, argv );
     //The most important part specify the things your
     //glut window should provide
