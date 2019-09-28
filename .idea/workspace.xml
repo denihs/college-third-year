@@ -15,8 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bba96156-aaac-45f2-ba6f-824262c83f79" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/SO/cigaretteSmokers.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TC/automato.c" beforeDir="false" afterPath="$PROJECT_DIR$/TC/automato.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/TC/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -29,52 +29,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="prova.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/provaPP3/prova.cpp">
+      <file leaf-file-name="cigaretteSmokers.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SO/cigaretteSmokers.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="263" column="51" selection-start-line="263" selection-start-column="51" selection-end-line="263" selection-end-column="51" />
+            <state relative-caret-position="430">
+              <caret line="134" column="36" lean-forward="true" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="automato.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TC/automato.c">
+      <file leaf-file-name="filosofos.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO/filosofos.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+            <state relative-caret-position="116">
+              <caret line="74" column="24" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="ballAndTorus.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/provaPP2/college-Computa-oGr-fica/Exercicios-CG/ballAndTorus/ballAndTorus.cpp">
+      <file leaf-file-name="barbeiro.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SO/barbeiro.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unproject.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/unproject.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1965">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geometricTransformation.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/trab/geometricTransformation.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2490">
-              <caret line="166" column="21" selection-start-line="166" selection-start-column="4" selection-end-line="166" selection-end-column="21" />
+            <state relative-caret-position="-701">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -91,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>and()%256);</find>
       <find>columnGolden</find>
       <find>angle</find>
       <find>spacecraft</find>
@@ -121,6 +97,7 @@
       <find>tam</find>
       <find>elem</find>
       <find>middle</find>
+      <find>mutex</find>
     </findStrings>
     <replaceStrings>
       <replace>color</replace>
@@ -170,6 +147,8 @@
         <option value="$PROJECT_DIR$/CG/unproject.c" />
         <option value="$PROJECT_DIR$/CG/provaPP3/prova.cpp" />
         <option value="$PROJECT_DIR$/TC/automato.c" />
+        <option value="$PROJECT_DIR$/SO/filosofos.c" />
+        <option value="$PROJECT_DIR$/SO/cigaretteSmokers.cpp" />
       </list>
     </option>
   </component>
@@ -201,6 +180,11 @@
             <path>
               <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
               <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college-third-year" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college-third-year" type="462c0819:PsiDirectoryNode" />
+              <item name="SO" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,6 +284,7 @@
       <workItem from="1567886174081" duration="2970000" />
       <workItem from="1567969505425" duration="10544000" />
       <workItem from="1569274750782" duration="4727000" />
+      <workItem from="1569670663241" duration="5941000" />
     </task>
     <task id="LOCAL-00001" summary="Finalização do trabalho de CG">
       <created>1555610387473</created>
@@ -480,7 +465,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172688000" />
+    <option name="totallyTimeSpent" value="178629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
@@ -493,7 +478,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32982087" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.26765016" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.35089567" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -513,31 +498,31 @@
       <window_info anchor="right" id="Mongo Explorer" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.16755603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="right" id="Mongo Explorer" order="5" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49973643" visible="true" weight="0.2897787" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002636" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Key Promoter X" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="CMake" order="8" weight="0.32982087" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,23 +557,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CG/trab/canvas.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SO/fork.1.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SO/fork.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SO/multMatriz/processo0.txt" />
     <entry file="file://$PROJECT_DIR$/SO/multMatriz/processo3.txt">
       <provider selected="true" editor-type-id="text-editor" />
@@ -812,7 +780,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/provaPP3/prova.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="3945">
           <caret line="263" column="51" selection-start-line="263" selection-start-column="51" selection-end-line="263" selection-end-column="51" />
         </state>
       </provider>
@@ -823,7 +791,28 @@
     <entry file="file://$PROJECT_DIR$/TC/automato.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
-          <caret line="123" column="33" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+          <caret line="123" column="33" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO/barbeiro.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-701">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO/filosofos.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SO/cigaretteSmokers.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="134" column="36" lean-forward="true" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="36" />
         </state>
       </provider>
     </entry>
