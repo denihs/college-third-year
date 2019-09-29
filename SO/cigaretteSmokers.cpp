@@ -93,9 +93,9 @@ void* smokerWithMatch(void *) {
     while (true) {
         sem_wait(&matchSem);
         printf("\n\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
-        printf("Fumante com o fósfaro: Fazendo o cigarro.\n");
+        printf("Fumante com o fósforo: Fazendo o cigarro.\n");
         sem_post(&agentSem);
-        printf("Fumante com o fósfaro: Fumando...\n");
+        printf("Fumante com o fósforo: Fumando...\n");
         printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n");
     }
 }
@@ -126,14 +126,14 @@ void* agent(void*) {
             }
             case 1: {
                 sem_wait(&agentSem);
-                printf("\n===> Colocando na mesa: Papel e fósfaro\n");
+                printf("\n===> Colocando na mesa: Papel e fósforo\n");
                 sem_post(&paper);
                 sem_post(&match);
                 break;
             }
             case 2: {
                 sem_wait(&agentSem);
-                printf("\n===> Colocando na mesa: Fósfaro e tabaco\n");
+                printf("\n===> Colocando na mesa: Fósforo e tabaco\n");
                 sem_post(&tobacco);
                 sem_post(&match);
                 break;
